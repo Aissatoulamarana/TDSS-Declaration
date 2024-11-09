@@ -15,7 +15,8 @@ import LoadingButton from '@mui/lab/LoadingButton';
 import { MenuItem, TextField } from '@mui/material';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
-import { paths } from 'src/routes/paths';
+import {paths} from 'src/routes/paths'
+//import { paths } from './routes/paths';
 import { useRouter } from 'src/routes/hooks';
 
 import { Label } from 'src/components/label';
@@ -197,20 +198,24 @@ export function TourNewEditForm({ currentUser }) {
                 sm: 'repeat(2, 1fr)',
               }}
             >
-              <Field.Text name="name" label="Nom " />
-              <Field.Text name="email" label="Adresse Mail" />
-              <Field.Phone name="phoneNumber" label="Numéro de Téléphone" />
-
+              <Field.Text name="name" label="Raison Sociale " />
+              <Field.Text name="company" label="RCCM" />
               <Field.CountrySelect
                 fullWidth
                 name="country"
-                label="Region"
-                placeholder="Selectionnez une Region "
+                label="Pays d'origine"
+                placeholder="Selectionnez le pays d'origine"
               />
+               <Field.Text name="address" label="Addresse" />
+               <Field.Text name="city" label="Ville" />
+              <Field.Text name="email" label="Adresse Mail" />
+              <Field.Phone name="phoneNumber" label="Numéro de Téléphone" />
 
-              <Field.Text name="city" label="Ville" />
-              <Field.Text name="address" label="Addresse" />
-              <Field.Text name="company" label="RCCM" />
+              
+
+              
+             
+             
               <TextField select name="role" label="Type" variant="outlined" fullWidth>
                 <MenuItem value="banque">Banque</MenuItem>
                 <MenuItem value="client">Client</MenuItem>
