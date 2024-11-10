@@ -3,7 +3,7 @@ import axios, { endpoints } from 'src/utils/axios';
 import { CONFIG } from 'src/config-global';
 import { getProduct } from 'src/actions/product-ssr';
 
-import { ProductShopDetailsView } from 'src/sections/product/view';
+// import { ProductShopDetailsView } from 'src/sections/product/view';
 
 // ----------------------------------------------------------------------
 
@@ -14,7 +14,7 @@ export default async function Page({ params }) {
 
   const { product } = await getProduct(id);
 
-  return <ProductShopDetailsView product={product} />;
+  // return <ProductShopDetailsView product={product} />;
 }
 
 // ----------------------------------------------------------------------
