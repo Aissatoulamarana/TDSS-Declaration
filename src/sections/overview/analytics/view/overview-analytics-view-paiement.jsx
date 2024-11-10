@@ -1,6 +1,6 @@
 'use client';
 
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material';
 
 import { _appInvoices } from 'src/_mock';
 import { CONFIG } from 'src/config-global';
