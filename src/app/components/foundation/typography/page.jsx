@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { TypographyView } from 'src/sections/_examples/foundation/typography-view';
+import { CONFIG } from '../../../../config-global';
+import { TypographyView } from '../../../../sections/_examples/foundation/typography-view';
 
 // ----------------------------------------------------------------------
 

@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { OverviewAppView } from 'src/sections/overview/app/view';
+import { CONFIG } from '../../config-global';
+import { OverviewAppView } from '../../sections/overview/app/view';
 
 // ----------------------------------------------------------------------
 

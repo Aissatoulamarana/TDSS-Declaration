@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { FirebaseSignInView } from 'src/auth/view/firebase';
+import { CONFIG } from '../../../../config-global';
+import { FirebaseSignInView } from '../../../../auth/view/firebase';
 
 // ----------------------------------------------------------------------
 

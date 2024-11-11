@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { OverviewPaiementView } from 'src/sections/overview/paiement/view';
+import { CONFIG } from '../../../../config-global';
+import { OverviewPaiementView } from '../../../../sections/overview/paiement/view';
 
 // ----------------------------------------------------------------------
 

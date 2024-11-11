@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { FormWizardView } from 'src/sections/_examples/extra/form-wizard-view';
+import { CONFIG } from '../../../../config-global';
+import { FormWizardView } from '../../../../sections/_examples/extra/form-wizard-view';
 
 // ----------------------------------------------------------------------
 

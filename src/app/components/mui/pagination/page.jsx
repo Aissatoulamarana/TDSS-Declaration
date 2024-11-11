@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { PaginationView } from 'src/sections/_examples/mui/pagination-view';
+import { CONFIG } from '../../../../config-global';
+import { PaginationView } from '../../../../sections/_examples/mui/pagination-view';
 
 // ----------------------------------------------------------------------
 

@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { MaintenanceView } from 'src/sections/maintenance/view';
+import { CONFIG } from '../../config-global';
+import { MaintenanceView } from '../../sections/maintenance/view';
 
 // ----------------------------------------------------------------------
 

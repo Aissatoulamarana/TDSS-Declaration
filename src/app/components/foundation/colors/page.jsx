@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { ColorsView } from 'src/sections/_examples/foundation/colors-view';
+import { CONFIG } from '../../../../config-global';
+import { ColorsView } from '../../../../sections/_examples/foundation/colors-view';
 
 // ----------------------------------------------------------------------
 

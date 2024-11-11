@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { LabelView } from 'src/sections/_examples/extra/label-view';
+import { CONFIG } from '../../../../config-global';
+import { LabelView } from '../../../../sections/_examples/extra/label-view';
 
 // ----------------------------------------------------------------------
 

@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { ComingSoonView } from 'src/sections/coming-soon/view';
+import { CONFIG } from '../../config-global';
+import { ComingSoonView } from '../../sections/coming-soon/view';
 
 // ----------------------------------------------------------------------
 

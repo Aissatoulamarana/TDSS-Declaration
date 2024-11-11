@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { SplitVerifyView } from 'src/auth/view/auth-demo/split';
+import { CONFIG } from '../../../../config-global';
+import { SplitVerifyView } from '../../../../auth/view/auth-demo/split';
 
 // ----------------------------------------------------------------------
 

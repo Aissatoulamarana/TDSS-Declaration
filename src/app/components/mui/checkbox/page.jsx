@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { CheckboxView } from 'src/sections/_examples/mui/checkbox-view';
+import { CONFIG } from '../../../../config-global';
+import { CheckboxView } from '../../../../sections/_examples/mui/checkbox-view';
 
 // ----------------------------------------------------------------------
 

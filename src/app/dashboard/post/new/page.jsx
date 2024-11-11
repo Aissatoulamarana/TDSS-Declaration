@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { PostCreateView } from 'src/sections/blog/view';
+import { CONFIG } from '../../../../config-global';
+import { PostCreateView } from '../../../../sections/blog/view';
 
 // ----------------------------------------------------------------------
 

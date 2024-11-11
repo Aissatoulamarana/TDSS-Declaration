@@ -1,7 +1,6 @@
-import { _tours } from 'src/_mock/_tour';
-import { CONFIG } from 'src/config-global';
-
-import { AnalyticsFactureView } from 'src/sections/overview/analytics/view';
+import { _tours } from '../../../../_mock/_tour';
+import { CONFIG } from '../../../../config-global';
+import { AnalyticsFactureView } from '../../../../sections/overview/analytics/view';
 
 // ----------------------------------------------------------------------
 

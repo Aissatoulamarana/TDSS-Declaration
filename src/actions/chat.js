@@ -1,8 +1,8 @@
 import { useMemo } from 'react';
 import useSWR, { mutate } from 'swr';
 
-import { keyBy } from 'src/utils/helper';
-import axios, { fetcher, endpoints } from 'src/utils/axios';
+import { keyBy } from '../utils/helper';
+import axios, { fetcher, endpoints } from '../utils/axios';
 
 // ----------------------------------------------------------------------
 

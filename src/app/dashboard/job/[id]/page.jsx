@@ -1,7 +1,6 @@
-import { _jobs } from 'src/_mock/_job';
-import { CONFIG } from 'src/config-global';
-
-import { JobDetailsView } from 'src/sections/job/view';
+import { _jobs } from '../../../../_mock/_job';
+import { CONFIG } from '../../../../config-global';
+import { JobDetailsView } from '../../../../sections/job/view';
 
 // ----------------------------------------------------------------------
 

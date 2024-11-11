@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { CalendarView } from 'src/sections/calendar/view';
+import { CONFIG } from '../../../config-global';
+import { CalendarView } from '../../../sections/calendar/view';
 
 // ----------------------------------------------------------------------
 

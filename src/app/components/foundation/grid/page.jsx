@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { GridView } from 'src/sections/_examples/foundation/grid-view';
+import { CONFIG } from '../../../../config-global';
+import { GridView } from '../../../../sections/_examples/foundation/grid-view';
 
 // ----------------------------------------------------------------------
 

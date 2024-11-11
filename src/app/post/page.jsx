@@ -1,7 +1,6 @@
-import { CONFIG } from 'src/config-global';
-import { getPosts } from 'src/actions/blog-ssr';
-
-import { PostListHomeView } from 'src/sections/blog/view';
+import { CONFIG } from '../../config-global';
+import { getPosts } from '../../actions/blog-ssr';
+import { PostListHomeView } from '../../sections/blog/view';
 
 // ----------------------------------------------------------------------
 

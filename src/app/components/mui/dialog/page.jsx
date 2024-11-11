@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { DialogView } from 'src/sections/_examples/mui/dialog-view';
+import { CONFIG } from '../../../../config-global';
+import { DialogView } from '../../../../sections/_examples/mui/dialog-view';
 
 // ----------------------------------------------------------------------
 

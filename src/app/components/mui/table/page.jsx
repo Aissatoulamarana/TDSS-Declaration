@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { TableView } from 'src/sections/_examples/mui/table-view';
+import { CONFIG } from '../../../../config-global';
+import { TableView } from '../../../../sections/_examples/mui/table-view';
 
 // ----------------------------------------------------------------------
 

@@ -3,11 +3,10 @@ import { m } from 'framer-motion';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 
-import { _mock } from 'src/_mock';
-
-import { AnimateText, MotionContainer } from 'src/components/animate';
-
 import { getVariant } from '../get-variant';
+import { _mock } from '../../../../../_mock';
+import { AnimateText, MotionContainer } from '../../../../../components/animate';
+
 
 // ----------------------------------------------------------------------
 

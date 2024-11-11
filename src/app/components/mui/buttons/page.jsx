@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { ButtonView } from 'src/sections/_examples/mui/button-view';
+import { CONFIG } from '../../../../config-global';
+import { ButtonView } from '../../../../sections/_examples/mui/button-view';
 
 // ----------------------------------------------------------------------
 

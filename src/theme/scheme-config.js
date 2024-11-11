@@ -1,4 +1,4 @@
-import { defaultSettings } from 'src/components/settings';
+import { defaultSettings } from '../components/settings';
 
 // ----------------------------------------------------------------------
 

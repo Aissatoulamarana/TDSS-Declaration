@@ -4,12 +4,9 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
 
-import { paths } from 'src/routes/paths';
-
-import { useTabs } from 'src/hooks/use-tabs';
-
-import { CustomBreadcrumbs } from 'src/components/custom-breadcrumbs';
-
+import { paths } from '../../../../routes/paths';
+import { useTabs } from '../../../../hooks/use-tabs';
+import { CustomBreadcrumbs } from '../../../../components/custom-breadcrumbs';
 import { AnimateOther } from './other';
 import { AnimateScroll } from './scroll';
 import { AnimateDialog } from './dialog';

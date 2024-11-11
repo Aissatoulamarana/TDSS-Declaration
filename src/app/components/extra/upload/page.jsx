@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { UploadView } from 'src/sections/_examples/extra/upload-view';
+import { CONFIG } from '../../../../config-global';
+import { UploadView } from '../../../../sections/_examples/extra/upload-view';
 
 // ----------------------------------------------------------------------
 

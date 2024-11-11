@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { JobListView } from 'src/sections/job/view';
+import { CONFIG } from '../../../config-global';
+import { JobListView } from '../../../sections/job/view';
 
 // ----------------------------------------------------------------------
 

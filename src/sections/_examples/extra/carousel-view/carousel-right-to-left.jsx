@@ -2,17 +2,17 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 
-import { varAlpha } from 'src/theme/styles';
-
-import { Iconify } from 'src/components/iconify';
+import { IndexLabel } from './elements';
+import { varAlpha } from '../../../../theme/styles';
+import { Iconify } from '../../../../components/iconify';
 import {
   Carousel,
   useCarousel,
   CarouselDotButtons,
   CarouselArrowFloatButtons,
-} from 'src/components/carousel';
+} from '../../../../components/carousel';
 
-import { IndexLabel } from './elements';
+
 
 // ----------------------------------------------------------------------
 

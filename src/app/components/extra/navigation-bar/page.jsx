@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { NavigationBarView } from 'src/sections/_examples/extra/navigation-bar-view';
+import { CONFIG } from '../../../../config-global';
+import { NavigationBarView } from '../../../../sections/_examples/extra/navigation-bar-view';
 
 // ----------------------------------------------------------------------
 

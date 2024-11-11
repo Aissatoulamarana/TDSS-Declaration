@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { Auth0SignInView } from 'src/auth/view/auth0';
+import { CONFIG } from '../../../../config-global';
+import { Auth0SignInView } from '../../../../auth/view/auth0';
 
 // ----------------------------------------------------------------------
 

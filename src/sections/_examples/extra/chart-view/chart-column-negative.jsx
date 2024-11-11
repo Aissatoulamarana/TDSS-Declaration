@@ -1,8 +1,7 @@
 import { useTheme } from '@mui/material/styles';
 
-import { fPercent } from 'src/utils/format-number';
-
-import { Chart, useChart } from 'src/components/chart';
+import { fPercent } from '../../../../utils/format-number';
+import { Chart, useChart } from '../../../../components/chart';
 
 // ----------------------------------------------------------------------
 

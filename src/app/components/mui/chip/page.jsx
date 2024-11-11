@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { ChipView } from 'src/sections/_examples/mui/chip-view';
+import { CONFIG } from '../../../../config-global';
+import { ChipView } from '../../../../sections/_examples/mui/chip-view';
 
 // ----------------------------------------------------------------------
 

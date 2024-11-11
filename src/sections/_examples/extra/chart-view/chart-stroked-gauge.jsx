@@ -1,8 +1,7 @@
 import { useTheme } from '@mui/material/styles';
 
-import { varAlpha } from 'src/theme/styles';
-
-import { Chart, useChart } from 'src/components/chart';
+import { varAlpha } from '../../../../theme/styles';
+import { Chart, useChart } from '../../../../components/chart';
 
 // ----------------------------------------------------------------------
 

@@ -1,8 +1,7 @@
-import { CONFIG } from 'src/config-global';
-import { getServerTranslations } from 'src/locales/server';
-
-import { MultiLanguageView } from 'src/sections/_examples/extra/multi-language-view';
-import { navData } from 'src/sections/_examples/extra/multi-language-view/config-nav';
+import { CONFIG } from '../../../../config-global';
+import { getServerTranslations } from '../../../../locales/server';
+import { MultiLanguageView } from '../../../../sections/_examples/extra/multi-language-view';
+import { navData } from '../../../../sections/_examples/extra/multi-language-view/config-nav';
 
 // ----------------------------------------------------------------------
 

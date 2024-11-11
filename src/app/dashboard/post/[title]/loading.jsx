@@ -1,6 +1,5 @@
-import { DashboardContent } from 'src/layouts/dashboard';
-
-import { PostDetailsSkeleton } from 'src/sections/blog/post-skeleton';
+import { DashboardContent } from '../../../../layouts/dashboard';
+import { PostDetailsSkeleton } from '../../../../sections/blog/post-skeleton';
 
 // ----------------------------------------------------------------------
 

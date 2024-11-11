@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { OrderListView } from 'src/sections/order/view';
+import { CONFIG } from '../../../config-global';
+import { OrderListView } from '../../../sections/order/view';
 
 // ----------------------------------------------------------------------
 

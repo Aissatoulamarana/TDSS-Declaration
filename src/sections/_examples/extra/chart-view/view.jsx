@@ -1,8 +1,7 @@
 'use client';
 
-import { paths } from 'src/routes/paths';
-
-import { CustomBreadcrumbs } from 'src/components/custom-breadcrumbs';
+import { paths } from '../../../../routes/paths';
+import { CustomBreadcrumbs } from '../../../../components/custom-breadcrumbs';
 
 import { ChartPie } from './chart-pie';
 import { ChartBar } from './chart-bar';

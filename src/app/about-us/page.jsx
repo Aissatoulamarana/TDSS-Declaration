@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { AboutView } from 'src/sections/about/view';
+import { CONFIG } from '../../config-global';
+import { AboutView } from '../../sections/about/view';
 
 // ----------------------------------------------------------------------
 

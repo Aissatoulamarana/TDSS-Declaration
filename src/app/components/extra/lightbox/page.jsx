@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { LightboxView } from 'src/sections/_examples/extra/lightbox-view';
+import { CONFIG } from '../../../../config-global';
+import { LightboxView } from '../../../../sections/_examples/extra/lightbox-view';
 
 // ----------------------------------------------------------------------
 

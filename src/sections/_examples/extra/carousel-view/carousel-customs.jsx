@@ -1,5 +1,6 @@
 import Box from '@mui/material/Box';
 
+import { IndexLabel } from './elements';
 import {
   Carousel,
   useCarousel,
@@ -7,9 +8,8 @@ import {
   CarouselArrowBasicButtons,
   CarouselArrowFloatButtons,
   CarouselArrowNumberButtons,
-} from 'src/components/carousel';
+} from '../../../../components/carousel';
 
-import { IndexLabel } from './elements';
 
 // ----------------------------------------------------------------------
 

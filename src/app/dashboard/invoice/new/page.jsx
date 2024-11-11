@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { InvoiceCreateView } from 'src/sections/invoice/view';
+import { CONFIG } from '../../../../config-global';
+import { InvoiceCreateView } from '../../../../sections/invoice/view';
 
 // ----------------------------------------------------------------------
 

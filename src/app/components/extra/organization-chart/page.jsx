@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { OrganizationalChartView } from 'src/sections/_examples/extra/organizational-chart-view';
+import { CONFIG } from '../../../../config-global';
+import { OrganizationalChartView } from '../../../../sections/_examples/extra/organizational-chart-view';
 
 // ----------------------------------------------------------------------
 

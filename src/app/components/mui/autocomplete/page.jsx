@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { AutocompleteView } from 'src/sections/_examples/mui/autocomplete-view';
+import { CONFIG } from '../../../../config-global';
+import { AutocompleteView } from '../../../../sections/_examples/mui/autocomplete-view';
 
 // ----------------------------------------------------------------------
 

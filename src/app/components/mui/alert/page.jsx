@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { AlertView } from 'src/sections/_examples/mui/alert-view';
+import { CONFIG } from '../../../../config-global';
+import { AlertView } from '../../../../sections/_examples/mui/alert-view';
 
 // ----------------------------------------------------------------------
 

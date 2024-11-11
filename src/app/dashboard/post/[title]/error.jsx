@@ -2,13 +2,11 @@
 
 import Button from '@mui/material/Button';
 
-import { paths } from 'src/routes/paths';
-import { RouterLink } from 'src/routes/components';
-
-import { DashboardContent } from 'src/layouts/dashboard';
-
-import { Iconify } from 'src/components/iconify';
-import { EmptyContent } from 'src/components/empty-content';
+import { paths } from '../../../../routes/paths';
+import { Iconify } from '../../../../components/iconify';
+import { RouterLink } from '../../../../routes/components';
+import { DashboardContent } from '../../../../layouts/dashboard';
+import { EmptyContent } from '../../../../components/empty-content';
 
 // ----------------------------------------------------------------------
 

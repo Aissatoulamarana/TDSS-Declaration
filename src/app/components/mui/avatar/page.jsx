@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { AvatarView } from 'src/sections/_examples/mui/avatar-view';
+import { CONFIG } from '../../../../config-global';
+import { AvatarView } from '../../../../sections/_examples/mui/avatar-view';
 
 // ----------------------------------------------------------------------
 

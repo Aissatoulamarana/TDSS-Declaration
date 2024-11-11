@@ -1,9 +1,7 @@
-import { paramCase } from 'src/utils/change-case';
-import axios, { endpoints } from 'src/utils/axios';
-
-import { CONFIG } from 'src/config-global';
-
-import { PostDetailsView } from 'src/sections/blog/view';
+import { CONFIG } from '../../../../config-global';
+import { paramCase } from '../../../../utils/change-case';
+import axios, { endpoints } from '../../../../utils/axios';
+import { PostDetailsView } from '../../../../sections/blog/view';
 
 // ----------------------------------------------------------------------
 

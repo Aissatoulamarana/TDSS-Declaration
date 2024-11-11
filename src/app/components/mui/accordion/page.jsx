@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { AccordionView } from 'src/sections/_examples/mui/accordion-view';
+import { CONFIG } from '../../../../config-global';
+import { AccordionView } from '../../../../sections/_examples/mui/accordion-view';
 
 // ----------------------------------------------------------------------
 

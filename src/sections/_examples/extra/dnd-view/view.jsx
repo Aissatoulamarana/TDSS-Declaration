@@ -1,10 +1,8 @@
 'use client';
 
-import { paths } from 'src/routes/paths';
-
-import { CustomBreadcrumbs } from 'src/components/custom-breadcrumbs';
-
 import { ComponentHero } from '../../component-hero';
+import { paths } from '../../../../routes/paths';
+import { CustomBreadcrumbs } from '../../../../components/custom-breadcrumbs';
 import { SortableContainer } from './sortable-container';
 import { ScrollToViewTemplate } from '../../component-template';
 

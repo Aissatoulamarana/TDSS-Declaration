@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { BadgeView } from 'src/sections/_examples/mui/badge-view';
+import { CONFIG } from '../../../../config-global';
+import { BadgeView } from '../../../../sections/_examples/mui/badge-view';
 
 // ----------------------------------------------------------------------
 

@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { DataGridView } from 'src/sections/_examples/mui/data-grid-view';
+import { CONFIG } from '../../../../config-global';
+import { DataGridView } from '../../../../sections/_examples/mui/data-grid-view';
 
 // ----------------------------------------------------------------------
 

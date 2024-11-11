@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { MegaMenuView } from 'src/sections/_examples/extra/mega-menu-view';
+import { CONFIG } from '../../../../config-global';
+import { MegaMenuView } from '../../../../sections/_examples/extra/mega-menu-view';
 
 // ----------------------------------------------------------------------
 

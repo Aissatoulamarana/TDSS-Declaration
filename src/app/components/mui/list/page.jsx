@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { ListView } from 'src/sections/_examples/mui/list-view';
+import { CONFIG } from '../../../../config-global';
+import { ListView } from '../../../../sections/_examples/mui/list-view';
 
 // ----------------------------------------------------------------------
 

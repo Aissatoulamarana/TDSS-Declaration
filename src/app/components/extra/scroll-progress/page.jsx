@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { ScrollProgressView } from 'src/sections/_examples/extra/scroll-progress-view';
+import { CONFIG } from '../../../../config-global';
+import { ScrollProgressView } from '../../../../sections/_examples/extra/scroll-progress-view';
 
 // ----------------------------------------------------------------------
 

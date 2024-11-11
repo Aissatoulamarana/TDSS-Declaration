@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { TooltipView } from 'src/sections/_examples/mui/tooltip-view';
+import { CONFIG } from '../../../../config-global';
+import { TooltipView } from '../../../../sections/_examples/mui/tooltip-view';
 
 // ----------------------------------------------------------------------
 

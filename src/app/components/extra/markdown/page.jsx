@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { MarkdownView } from 'src/sections/_examples/extra/markdown-view';
+import { CONFIG } from '../../../../config-global';
+import { MarkdownView } from '../../../../sections/_examples/extra/markdown-view';
 
 // ----------------------------------------------------------------------
 

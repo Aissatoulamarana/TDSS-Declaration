@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { FirebaseResetPasswordView } from 'src/auth/view/firebase';
+import { CONFIG } from '../../../../config-global';
+import { FirebaseResetPasswordView } from '../../../../auth/view/firebase';
 
 // ----------------------------------------------------------------------
 

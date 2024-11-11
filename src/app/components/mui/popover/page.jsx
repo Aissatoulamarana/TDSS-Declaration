@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { PopoverView } from 'src/sections/_examples/mui/popover-view';
+import { CONFIG } from '../../../../config-global';
+import { PopoverView } from '../../../../sections/_examples/mui/popover-view';
 
 // ----------------------------------------------------------------------
 

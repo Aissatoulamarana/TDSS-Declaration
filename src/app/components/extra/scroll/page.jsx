@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { ScrollbarView } from 'src/sections/_examples/extra/scrollbar-view';
+import { CONFIG } from '../../../../config-global';
+import { ScrollbarView } from '../../../../sections/_examples/extra/scrollbar-view';
 
 // ----------------------------------------------------------------------
 

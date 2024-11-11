@@ -1,4 +1,4 @@
-import { SimpleLayout } from 'src/layouts/simple';
+import { SimpleLayout } from '../../layouts/simple';
 
 // ----------------------------------------------------------------------
 

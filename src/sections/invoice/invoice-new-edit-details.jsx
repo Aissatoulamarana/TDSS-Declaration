@@ -8,10 +8,10 @@ import Divider from '@mui/material/Divider';
 import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
 
-import { INVOICE_SERVICE_OPTIONS } from 'src/_mock';
+import  Field  from '../../components/hook-form';
+import  Iconify  from '../../components/iconify';
+import  INVOICE_SERVICE_OPTIONS  from '../../_mock';
 
-import { Field } from 'src/components/hook-form';
-import { Iconify } from 'src/components/iconify';
 
 // ----------------------------------------------------------------------
 
@@ -190,7 +190,7 @@ export function InvoiceNewEditDetails() {
                 Données Personnelles
               </Typography>
               <Stack direction={{ xs: 'column', md: 'row' }} spacing={15} sx={{ width: 1 }}>
-                {['Photo', 'Signature', 'Empreinte'].map((label, i) => (
+                {['Recto', 'Verso', 'Signature', 'Empreinte'].map((label, i) => (
                   <Stack key={i} spacing={1} sx={{ alignItems: 'center' }}>
                     <Typography variant="subtitle1" align="center">
                       {label}

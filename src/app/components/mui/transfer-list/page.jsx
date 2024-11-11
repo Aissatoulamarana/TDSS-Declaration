@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { TransferListView } from 'src/sections/_examples/mui/transfer-list-view';
+import { CONFIG } from '../../../../config-global';
+import { TransferListView } from '../../../../sections/_examples/mui/transfer-list-view';
 
 // ----------------------------------------------------------------------
 

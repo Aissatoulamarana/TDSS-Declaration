@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { ShadowsView } from 'src/sections/_examples/foundation/shadows-view';
+import { CONFIG } from '../../../../config-global';
+import { ShadowsView } from '../../../../sections/_examples/foundation/shadows-view';
 
 // ----------------------------------------------------------------------
 

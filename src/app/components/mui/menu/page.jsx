@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { MenuView } from 'src/sections/_examples/mui/menu-view';
+import { CONFIG } from '../../../../config-global';
+import { MenuView } from '../../../../sections/_examples/mui/menu-view';
 
 // ----------------------------------------------------------------------
 

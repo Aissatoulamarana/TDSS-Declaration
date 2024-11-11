@@ -4,13 +4,10 @@ import { doc, getDoc } from 'firebase/firestore';
 import { onAuthStateChanged } from 'firebase/auth';
 import { useMemo, useEffect, useCallback } from 'react';
 
-import { useSetState } from 'src/hooks/use-set-state';
-
-import axios from 'src/utils/axios';
-
-import { AUTH, FIRESTORE } from 'src/lib/firebase';
-
+import axios from '../../../utils/axios';
 import { AuthContext } from '../auth-context';
+import { AUTH, FIRESTORE } from '../../../lib/firebase';
+import { useSetState } from '../../../hooks/use-set-state';
 
 // ----------------------------------------------------------------------
 

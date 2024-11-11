@@ -3,11 +3,10 @@ import { useState, useCallback } from 'react';
 import Card from '@mui/material/Card';
 import Stack from '@mui/material/Stack';
 
-import { useBoolean } from 'src/hooks/use-boolean';
-
 import { Toolbar } from './toolbar';
 import { ContainerView } from './container';
 import { ControlPanel } from '../control-panel';
+import { useBoolean } from '../../../../../hooks/use-boolean';
 
 // ----------------------------------------------------------------------
 

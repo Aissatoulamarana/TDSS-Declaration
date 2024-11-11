@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { ProgressView } from 'src/sections/_examples/mui/progress-view';
+import { CONFIG } from '../../../../config-global';
+import { ProgressView } from '../../../../sections/_examples/mui/progress-view';
 
 // ----------------------------------------------------------------------
 

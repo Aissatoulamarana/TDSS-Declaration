@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { SnackbarView } from 'src/sections/_examples/extra/snackbar-view';
+import { CONFIG } from '../../../../config-global';
+import { SnackbarView } from '../../../../sections/_examples/extra/snackbar-view';
 
 // ----------------------------------------------------------------------
 

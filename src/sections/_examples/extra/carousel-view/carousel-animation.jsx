@@ -4,12 +4,12 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-import { varAlpha, bgGradient } from 'src/theme/styles';
-
-import { varFade, MotionContainer } from 'src/components/animate';
-import { Carousel, useCarousel, CarouselArrowNumberButtons } from 'src/components/carousel';
-
 import { IndexLabel } from './elements';
+import { varAlpha, bgGradient } from '../../../../theme/styles';
+import { varFade, MotionContainer } from '../../../../components/animate';
+import { Carousel, useCarousel, CarouselArrowNumberButtons } from '../../../../components/carousel';
+
+
 
 // ----------------------------------------------------------------------
 

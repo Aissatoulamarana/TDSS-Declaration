@@ -4,13 +4,12 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import { Experimental_CssVarsProvider as CssVarsProvider } from '@mui/material/styles';
 
-import { useTranslate } from 'src/locales';
-
-import { useSettingsContext } from 'src/components/settings';
-
+import { useTranslate } from '../locales';
 import { createTheme } from './create-theme';
 import { schemeConfig } from './scheme-config';
 import { RTL } from './with-settings/right-to-left';
+import { useSettingsContext } from '../components/settings';
+
 
 // ----------------------------------------------------------------------
 

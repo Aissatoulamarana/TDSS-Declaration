@@ -2,14 +2,14 @@ import Fade from 'embla-carousel-fade';
 
 import Box from '@mui/material/Box';
 
+import { IndexLabel } from './elements';
 import {
   Carousel,
   useCarousel,
   CarouselDotButtons,
   CarouselArrowBasicButtons,
-} from 'src/components/carousel';
+} from '../../../../components/carousel';
 
-import { IndexLabel } from './elements';
 
 // ----------------------------------------------------------------------
 

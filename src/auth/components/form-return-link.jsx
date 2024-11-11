@@ -1,8 +1,8 @@
 import Link from '@mui/material/Link';
 
-import { RouterLink } from 'src/routes/components';
+import { Iconify } from '../../components/iconify';
+import { RouterLink } from '../../routes/components';
 
-import { Iconify } from 'src/components/iconify';
 
 // ----------------------------------------------------------------------
 

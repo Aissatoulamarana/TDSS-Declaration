@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { PricingView } from 'src/sections/pricing/view';
+import { CONFIG } from '../../config-global';
+import { PricingView } from '../../sections/pricing/view';
 
 // ----------------------------------------------------------------------
 

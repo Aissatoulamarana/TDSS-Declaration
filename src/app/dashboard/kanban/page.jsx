@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { KanbanView } from 'src/sections/kanban/view';
+import { CONFIG } from '../../../config-global';
+import { KanbanView } from '../../../sections/kanban/view';
 
 // ----------------------------------------------------------------------
 

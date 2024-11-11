@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { RadioButtonView } from 'src/sections/_examples/mui/radio-button-view';
+import { CONFIG } from '../../../../config-global';
+import { RadioButtonView } from '../../../../sections/_examples/mui/radio-button-view';
 
 // ----------------------------------------------------------------------
 

@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { SupabaseUpdatePasswordView } from 'src/auth/view/supabase';
+import { CONFIG } from '../../../../config-global';
+import { SupabaseUpdatePasswordView } from '../../../../auth/view/supabase';
 
 // ----------------------------------------------------------------------
 

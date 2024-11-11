@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { TimelineView } from 'src/sections/_examples/mui/timeline-view';
+import { CONFIG } from '../../../../config-global';
+import { TimelineView } from '../../../../sections/_examples/mui/timeline-view';
 
 // ----------------------------------------------------------------------
 

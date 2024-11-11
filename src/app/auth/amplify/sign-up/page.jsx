@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { AmplifySignUpView } from 'src/auth/view/amplify';
+import { CONFIG } from '../../../../config-global';
+import { AmplifySignUpView } from '../../../../auth/view/amplify';
 
 // ----------------------------------------------------------------------
 

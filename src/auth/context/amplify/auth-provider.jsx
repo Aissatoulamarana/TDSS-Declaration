@@ -4,13 +4,13 @@ import { Amplify } from 'aws-amplify';
 import { useMemo, useEffect, useCallback } from 'react';
 import { fetchAuthSession, fetchUserAttributes } from 'aws-amplify/auth';
 
-import { useSetState } from 'src/hooks/use-set-state';
-
-import axios from 'src/utils/axios';
-
-import { CONFIG } from 'src/config-global';
-
+import axios from '../../../utils/axios';
 import { AuthContext } from '../auth-context';
+import { CONFIG } from '../../../config-global';
+import { useSetState } from '../../../hooks/use-set-state';
+
+
+
 
 // ----------------------------------------------------------------------
 

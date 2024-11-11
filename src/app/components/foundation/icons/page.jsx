@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { IconsView } from 'src/sections/_examples/foundation/icons-view';
+import { CONFIG } from '../../../../config-global';
+import { IconsView } from '../../../../sections/_examples/foundation/icons-view';
 
 // ----------------------------------------------------------------------
 

@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { FormValidationView } from 'src/sections/_examples/extra/form-validation-view';
+import { CONFIG } from '../../../../config-global';
+import { FormValidationView } from '../../../../sections/_examples/extra/form-validation-view';
 
 // ----------------------------------------------------------------------
 

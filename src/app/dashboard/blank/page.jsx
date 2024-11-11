@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { BlankView } from 'src/sections/blank/view';
+import { CONFIG } from '../../../config-global';
+import { BlankView } from '../../../sections/blank/view';
 
 // ----------------------------------------------------------------------
 

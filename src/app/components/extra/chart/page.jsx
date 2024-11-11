@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { ChartView } from 'src/sections/_examples/extra/chart-view';
+import { CONFIG } from '../../../../config-global';
+import { ChartView } from '../../../../sections/_examples/extra/chart-view';
 
 // ----------------------------------------------------------------------
 

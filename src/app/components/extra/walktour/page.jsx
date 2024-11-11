@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { WalktourView } from 'src/sections/_examples/extra/walktour-view';
+import { CONFIG } from '../../../../config-global';
+import { WalktourView } from '../../../../sections/_examples/extra/walktour-view';
 
 // ----------------------------------------------------------------------
 

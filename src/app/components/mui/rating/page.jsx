@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { RatingView } from 'src/sections/_examples/mui/rating-view';
+import { CONFIG } from '../../../../config-global';
+import { RatingView } from '../../../../sections/_examples/mui/rating-view';
 
 // ----------------------------------------------------------------------
 

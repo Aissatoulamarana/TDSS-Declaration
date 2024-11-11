@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { StepperView } from 'src/sections/_examples/mui/stepper-view';
+import { CONFIG } from '../../../../config-global';
+import { StepperView } from '../../../../sections/_examples/mui/stepper-view';
 
 // ----------------------------------------------------------------------
 

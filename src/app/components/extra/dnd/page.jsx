@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { DndView } from 'src/sections/_examples/extra/dnd-view';
+import { CONFIG } from '../../../../config-global';
+import { DndView } from '../../../../sections/_examples/extra/dnd-view';
 
 // ----------------------------------------------------------------------
 

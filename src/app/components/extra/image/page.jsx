@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { ImageView } from 'src/sections/_examples/extra/image-view';
+import { CONFIG } from '../../../../config-global';
+import { ImageView } from '../../../../sections/_examples/extra/image-view';
 
 // ----------------------------------------------------------------------
 

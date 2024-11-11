@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { PickerView } from 'src/sections/_examples/mui/picker-view';
+import { CONFIG } from '../../../../config-global';
+import { PickerView } from '../../../../sections/_examples/mui/picker-view';
 
 // ----------------------------------------------------------------------
 

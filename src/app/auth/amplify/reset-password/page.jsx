@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { AmplifyResetPasswordView } from 'src/auth/view/amplify';
+import { CONFIG } from '../../../../config-global';
+import { AmplifyResetPasswordView } from '../../../../auth/view/amplify';
 
 // ----------------------------------------------------------------------
 

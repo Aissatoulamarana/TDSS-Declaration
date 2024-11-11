@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { UtilitiesView } from 'src/sections/_examples/extra/utilities-view';
+import { CONFIG } from '../../../../config-global';
+import { UtilitiesView } from '../../../../sections/_examples/extra/utilities-view';
 
 // ----------------------------------------------------------------------
 

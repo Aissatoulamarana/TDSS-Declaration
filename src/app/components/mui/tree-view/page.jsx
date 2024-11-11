@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { TreeView } from 'src/sections/_examples/mui/tree-view';
+import { CONFIG } from '../../../../config-global';
+import { TreeView } from '../../../../sections/_examples/mui/tree-view';
 
 // ----------------------------------------------------------------------
 

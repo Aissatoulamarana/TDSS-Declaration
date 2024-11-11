@@ -3,8 +3,7 @@ import { checkboxClasses } from '@mui/material/Checkbox';
 import { menuItemClasses } from '@mui/material/MenuItem';
 import { autocompleteClasses } from '@mui/material/Autocomplete';
 
-import { CONFIG } from 'src/config-global';
-
+import { CONFIG } from '../../config-global';
 import { remToPx, varAlpha, mediaQueries } from './utils';
 
 // ----------------------------------------------------------------------

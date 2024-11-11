@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { FaqsView } from 'src/sections/faqs/view';
+import { CONFIG } from '../../config-global';
+import { FaqsView } from '../../sections/faqs/view';
 
 // ----------------------------------------------------------------------
 

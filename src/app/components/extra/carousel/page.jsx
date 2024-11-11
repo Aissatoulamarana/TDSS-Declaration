@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { CarouselView } from 'src/sections/_examples/extra/carousel-view';
+import { CONFIG } from '../../../../config-global';
+import { CarouselView } from '../../../../sections/_examples/extra/carousel-view';
 
 // ----------------------------------------------------------------------
 

@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { View403 } from 'src/sections/error';
+import { CONFIG } from '../../../config-global';
+import { View403 } from '../../../sections/error';
 
 // ----------------------------------------------------------------------
 

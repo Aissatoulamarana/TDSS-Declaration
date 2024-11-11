@@ -5,10 +5,8 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
-import { varContainer, MotionViewport } from 'src/components/animate';
-
 import { getVariant } from '../get-variant';
-
+import { varContainer, MotionViewport } from '../../../../../components/animate';
 // ----------------------------------------------------------------------
 
 export function ContainerView({ selectVariant, sx, ...other }) {

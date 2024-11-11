@@ -3,17 +3,16 @@ import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import CardContent from '@mui/material/CardContent';
 
-import { maxLine, varAlpha, bgGradient } from 'src/theme/styles';
-
-import { Iconify } from 'src/components/iconify';
+import { IndexLabel } from './elements';
+import { Iconify } from '../../../../components/iconify';
+import { maxLine, varAlpha, bgGradient } from '../../../../theme/styles';
 import {
   Carousel,
   useCarousel,
   CarouselDotButtons,
   CarouselArrowFloatButtons,
-} from 'src/components/carousel';
+} from '../../../../components/carousel';
 
-import { IndexLabel } from './elements';
 
 // ----------------------------------------------------------------------
 

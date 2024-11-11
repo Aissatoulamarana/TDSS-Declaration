@@ -79,8 +79,8 @@ export const navData = [
         children: [
           { title: 'Listes des déclarations', path: paths.dashboard.invoice.root },
           { title: 'Nouvelle Déclaration', path: paths.dashboard.invoice.new },
-          { title: 'Details', path: paths.dashboard.invoice.demo.details },
-          { title: 'Modifier', path: paths.dashboard.invoice.demo.edit },
+          // { title: 'Details', path: paths.dashboard.invoice.demo.details },
+         // { title: 'Modifier', path: paths.dashboard.invoice.demo.edit },
         ],
       },
       {
@@ -121,8 +121,8 @@ export const navData = [
         children: [
           { title: 'Listes des utilisateurs', path: paths.dashboard.user.list },
           { title: 'ajouter', path: paths.dashboard.user.new },
-          { title: 'Modifier', path: paths.dashboard.user.demo.edit },
-          { title: 'Profil', path: paths.dashboard.user.account },
+          // { title: 'Modifier', path: paths.dashboard.user.demo.edit },
+          // { title: 'Profil', path: paths.dashboard.user.account },
         ],
       },
 
@@ -132,9 +132,9 @@ export const navData = [
         icon: ICONS.job,
         children: [
           { title: 'Listes', path: paths.dashboard.job.root },
-          { title: 'Details', path: paths.dashboard.job.demo.details },
+          // { title: 'Details', path: paths.dashboard.job.demo.details },
           { title: 'Ajouter', path: paths.dashboard.job.new },
-          { title: 'Modifier', path: paths.dashboard.job.demo.edit },
+          // { title: 'Modifier', path: paths.dashboard.job.demo.edit },
         ],
       },
       {
@@ -155,9 +155,9 @@ export const navData = [
         icon: ICONS.tour,
         children: [
           { title: 'Listes', path: paths.dashboard.tour.root },
-          { title: 'Details', path: paths.dashboard.tour.demo.details },
+          // { title: 'Details', path: paths.dashboard.tour.demo.details },
           { title: 'Nouvelle', path: paths.dashboard.tour.new },
-          { title: 'Edit', path: paths.dashboard.tour.demo.edit },
+          // { title: 'Edit', path: paths.dashboard.tour.demo.edit },
         ],
       },
       /* { title: 'File manager', path: paths.dashboard.fileManager, icon: ICONS.folder },

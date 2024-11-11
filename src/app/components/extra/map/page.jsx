@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { MapView } from 'src/sections/_examples/extra/map-view';
+import { CONFIG } from '../../../../config-global';
+import { MapView } from '../../../../sections/_examples/extra/map-view';
 
 // ----------------------------------------------------------------------
 

@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { FirebaseVerifyView } from 'src/auth/view/firebase';
+import { CONFIG } from '../../../../config-global';
+import { FirebaseVerifyView } from '../../../../auth/view/firebase';
 
 // ----------------------------------------------------------------------
 

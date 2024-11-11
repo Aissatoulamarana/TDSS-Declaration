@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { SliderView } from 'src/sections/_examples/mui/slider-view';
+import { CONFIG } from '../../../../config-global';
+import { SliderView } from '../../../../sections/_examples/mui/slider-view';
 
 // ----------------------------------------------------------------------
 

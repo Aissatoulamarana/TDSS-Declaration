@@ -1,6 +1,5 @@
-import { CONFIG } from 'src/config-global';
-
-import { TabsView } from 'src/sections/_examples/mui/tabs-view';
+import { CONFIG } from '../../../../config-global';
+import { TabsView } from '../../../../sections/_examples/mui/tabs-view';
 
 // ----------------------------------------------------------------------
 
