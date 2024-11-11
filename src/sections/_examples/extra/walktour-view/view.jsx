@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import Switch from '@mui/material/Switch';
 import { useTheme } from '@mui/material/styles';
 import Container from '@mui/material/Container';
-import Grid from '@mui/material';
+import { Grid } from '@mui/material';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 

@@ -2,7 +2,7 @@ import { m } from 'framer-motion';
 
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import Grid from '@mui/material';
+import { Grid } from '@mui/material';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 

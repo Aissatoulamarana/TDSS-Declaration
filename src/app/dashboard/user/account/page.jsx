@@ -1,5 +1,6 @@
-import { CONFIG } from '../../../../config-global';
-import { AccountView } from '../../../../sections/account/view';
+import { CONFIG } from 'src/config-global';
+
+import { AccountView } from 'src/sections/account/view';
 
 // ----------------------------------------------------------------------
 

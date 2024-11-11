@@ -6,8 +6,8 @@ import Tabs from '@mui/material/Tabs';
 
 import { paths } from '../../../../routes/paths';
 import { useTabs } from '../../../../hooks/use-tabs';
-import { CustomBreadcrumbs } from '../../../../components/custom-breadcrumbs';
 import { AnimateOther } from './other';
+import { CustomBreadcrumbs } from '../../../../components/custom-breadcrumbs';
 import { AnimateScroll } from './scroll';
 import { AnimateDialog } from './dialog';
 import { AnimateInview } from './inview';

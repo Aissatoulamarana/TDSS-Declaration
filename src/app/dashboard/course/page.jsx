@@ -1,5 +1,6 @@
-import { CONFIG } from '../../../config-global';
-import { OverviewCourseView } from '../../../sections/overview/course/view';
+import { CONFIG } from 'src/config-global';
+
+import { OverviewCourseView } from 'src/sections/overview/course/view';
 
 // ----------------------------------------------------------------------
 

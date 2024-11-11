@@ -1,6 +1,7 @@
-import { _tours } from '../../../../../_mock/_tour';
-import { CONFIG } from '../../../../../config-global';
-import { TourEditView } from '../../../../../sections/tour/view';
+import { _tours } from 'src/_mock/_tour';
+import { CONFIG } from 'src/config-global';
+
+import { TourEditView } from 'src/sections/tour/view';
 
 // ----------------------------------------------------------------------
 

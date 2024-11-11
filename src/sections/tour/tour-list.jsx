@@ -2,7 +2,7 @@ import * as React from 'react';
 import parse from 'autosuggest-highlight/parse';
 
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
+import { Grid } from '@mui/material';
 import { debounce } from '@mui/material/utils';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';

@@ -2,10 +2,10 @@
 
 
 
-import paths from '../../../routes/paths';
-import  DashboardContent from '../../../layouts/dashboard';
+import {paths} from '../../../routes/paths';
+import  {DashboardContent} from '../../../layouts/dashboard';
 import { InvoiceNewEditForm } from '../invoice-new-edit-form';
-import  CustomBreadcrumbs  from '../../../components/custom-breadcrumbs';
+import  {CustomBreadcrumbs}  from '../../../components/custom-breadcrumbs';
 
 
 

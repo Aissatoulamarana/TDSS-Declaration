@@ -1,6 +1,6 @@
 'use client';
 
-import Grid from '@mui/material';
+import {Grid} from '@mui/material';
 
 import { _appInvoices } from 'src/_mock';
 import { CONFIG } from 'src/config-global';
@@ -24,7 +24,7 @@ export function AnalyticsFactureView() {
             percent={2.6}
             total={714000}
             icon={
-              <img alt="icon" src={`${CONFIG.assetsDir}/assets/icons/glass/ic-glass-people.svg`} />
+              <Image alt="icon" src={`${CONFIG.assetsDir}/assets/icons/glass/ic-glass-people.svg`} />
             }
             chart={{
               categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
@@ -40,7 +40,7 @@ export function AnalyticsFactureView() {
             total={1352831}
             color="secondary"
             icon={
-              <img alt="icon" src={`${CONFIG.assetsDir}/assets/icons/glass/ic-glass-users.svg`} />
+              <Image alt="icon" src={`${CONFIG.assetsDir}/assets/icons/glass/ic-glass-users.svg`} />
             }
             chart={{
               categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
@@ -56,7 +56,7 @@ export function AnalyticsFactureView() {
             total={1723315}
             color="warning"
             icon={
-              <img alt="icon" src={`${CONFIG.assetsDir}/assets/icons/glass/ic-glass-buy.svg`} />
+              <Image alt="icon" src={`${CONFIG.assetsDir}/assets/icons/glass/ic-glass-buy.svg`} />
             }
             chart={{
               categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],

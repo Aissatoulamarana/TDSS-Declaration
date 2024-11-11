@@ -21,7 +21,7 @@ import { TourNewEditForm } from './tour-new-edit-form';
 
 // ----------------------------------------------------------------------
 
-export function UserTableRow({ row, selected, onEditRow, onSelectRow, onDeleteRow, onViewRow }) {
+export function EntrepriseTableRow({ row, selected, onEditRow, onSelectRow, onDeleteRow, onViewRow }) {
   const confirm = useBoolean();
 
   const popover = usePopover();

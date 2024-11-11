@@ -1,5 +1,6 @@
-import { CONFIG } from '../../../config-global';
-import { ChatView } from '../../../sections/chat/view';
+import { CONFIG } from 'src/config-global';
+
+import { ChatView } from 'src/sections/chat/view';
 
 // ----------------------------------------------------------------------
 

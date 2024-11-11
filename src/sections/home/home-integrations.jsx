@@ -3,7 +3,7 @@ import { m } from 'framer-motion';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Container from '@mui/material/Container';
-import Grid from '@mui/material';
+import { Grid } from '@mui/material';
 
 import { CONFIG } from 'src/config-global';
 

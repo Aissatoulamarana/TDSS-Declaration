@@ -3,7 +3,7 @@
 import { useState, useCallback } from 'react';
 
 import Box from '@mui/material/Box';
-import Grid from '@mui/material';
+import { Grid } from '@mui/material';
 import Typography from '@mui/material/Typography';
 
 import { paths } from 'src/routes/paths';

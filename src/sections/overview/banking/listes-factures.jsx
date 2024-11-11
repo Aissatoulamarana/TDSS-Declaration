@@ -12,7 +12,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import TableBody from '@mui/material/TableBody';
 import { useTheme } from '@mui/material/styles';
-import Grid from '@mui/material';
+import { Grid } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 
 import { paths } from 'src/routes/paths';

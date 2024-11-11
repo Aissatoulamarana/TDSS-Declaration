@@ -41,9 +41,9 @@ import {
   TablePaginationCustom,
 } from 'src/components/table';
 
-import { UserTableRow } from '../user-table-row';
-import { UserTableToolbar } from '../user-table-toolbar';
-import { UserTableFiltersResult } from '../user-table-filters-result';
+import { EntrepriseTableRow } from './entreprise-table-row';
+import { EntrepriseTableToolbar } from './entreprise-table-toolbar';
+import { EntrepriseTableFiltersResult } from './entreprise-table-filters-result';
 
 // ----------------------------------------------------------------------
 
@@ -193,14 +193,14 @@ export function UserListView() {
             ))}
           </Tabs>
 
-          <UserTableToolbar
+          <EntrepriseTableToolbar
             filters={filters}
             onResetPage={table.onResetPage}
             options={{ roles: _roles }}
           />
 
           {canReset && (
-            <UserTableFiltersResult
+            <EntrepriseTableFiltersResult
               filters={filters}
               totalResults={dataFiltered.length}
               onResetPage={table.onResetPage}
@@ -252,7 +252,7 @@ export function UserListView() {
                       table.page * table.rowsPerPage + table.rowsPerPage
                     )
                     .map((row) => (
-                      <UserTableRow
+                      <EntrepriseTableRow
                         key={row.id}
                         row={row}
                         selected={table.selected.includes(row.id)}

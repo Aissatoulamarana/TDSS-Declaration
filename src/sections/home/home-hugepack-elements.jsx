@@ -1,10 +1,10 @@
 import { useRef, useState, forwardRef } from 'react';
 import { m, useSpring, useScroll, useTransform, useMotionValueEvent } from 'framer-motion';
 
+import { Grid } from '@mui/material';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
-import Grid from '@mui/material';
 import Typography from '@mui/material/Typography';
 import { styled, useTheme } from '@mui/material/styles';
 

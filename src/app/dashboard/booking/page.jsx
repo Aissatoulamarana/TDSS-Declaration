@@ -1,5 +1,6 @@
-import { CONFIG } from '../../../config-global';
-import { OverviewBookingView } from '../../../sections/overview/booking/view';
+import { CONFIG } from 'src/config-global';
+
+import { OverviewBookingView } from 'src/sections/overview/booking/view';
 
 // ----------------------------------------------------------------------
 

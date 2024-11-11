@@ -1,5 +1,6 @@
-import { CONFIG } from '../../../../config-global';
-import { TourCreateView } from '../../../../sections/tour/view';
+import { CONFIG } from 'src/config-global';
+
+import { TourCreateView } from 'src/sections/tour/view';
 
 // ----------------------------------------------------------------------
 

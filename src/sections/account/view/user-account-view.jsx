@@ -14,7 +14,6 @@ import { Iconify } from 'src/components/iconify';
 import { CustomBreadcrumbs } from 'src/components/custom-breadcrumbs';
 
 import { AccountGeneral } from '../account-general';
-import { AccountBilling } from '../account-billing';
 import { AccountSocialLinks } from '../account-social-links';
 import { AccountNotifications } from '../account-notifications';
 import { AccountChangePassword } from '../account-change-password';

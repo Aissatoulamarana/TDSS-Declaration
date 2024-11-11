@@ -1,5 +1,6 @@
-import { CONFIG } from '../../../../config-global';
-import { UserCardsView } from '../../../../sections/user/view';
+import { CONFIG } from 'src/config-global';
+
+import { UserCardsView } from 'src/sections/user/view';
 
 // ----------------------------------------------------------------------
 

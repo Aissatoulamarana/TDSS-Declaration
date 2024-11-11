@@ -1,12 +1,8 @@
 'use client';
 
-import { paths } from 'src/routes/paths';
-
-import { _mock } from 'src/_mock';
-
-import { CustomBreadcrumbs } from 'src/components/custom-breadcrumbs';
-
+import { _mock } from '../../../../_mock';
 import { CarouselFade } from './carousel-fade';
+import { paths } from '../../../../routes/paths';
 import { CarouselYaxis } from './carousel-yaxis';
 import { CarouselAlign } from './carousel-align';
 import { CarouselScale } from './carousel-scale';
@@ -25,6 +21,7 @@ import { CarouselAutoHeight } from './carousel-auto-height';
 import { CarouselRightToLeft } from './carousel-right-to-left';
 import { ScrollToViewTemplate } from '../../component-template';
 import { CarouselVariableWidths } from './carousel-variable-widths';
+import { CustomBreadcrumbs } from '../../../../components/custom-breadcrumbs';
 
 // ----------------------------------------------------------------------
 

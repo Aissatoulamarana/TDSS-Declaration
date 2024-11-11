@@ -1,5 +1,6 @@
-import { CONFIG } from '../../../config-global';
-import { PermissionDeniedView } from '../../../sections/permission/view';
+import { CONFIG } from 'src/config-global';
+
+import { PermissionDeniedView } from 'src/sections/permission/view';
 
 // ----------------------------------------------------------------------
 
