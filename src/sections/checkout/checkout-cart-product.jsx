@@ -13,7 +13,7 @@ import { Label } from 'src/components/label';
 import { Iconify } from 'src/components/iconify';
 import { ColorPreview } from 'src/components/color-utils';
 
-import { IncrementerButton } from '../product/components/incrementer-button';
+// import { IncrementerButton } from '../product/components/incrementer-button';
 
 // ----------------------------------------------------------------------
 
@@ -51,13 +51,13 @@ export function CheckoutCartProduct({ row, onDelete, onDecrease, onIncrease }) {
 
       <TableCell>
         <Box sx={{ width: 88, textAlign: 'right' }}>
-          <IncrementerButton
+          {/* <IncrementerButton
             quantity={row.quantity}
             onDecrease={onDecrease}
             onIncrease={onIncrease}
             disabledDecrease={row.quantity <= 1}
             disabledIncrease={row.quantity >= row.available}
-          />
+          /> */}
 
           <Typography variant="caption" component="div" sx={{ color: 'text.secondary', mt: 1 }}>
             available: {row.available}

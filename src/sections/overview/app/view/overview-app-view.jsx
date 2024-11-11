@@ -2,7 +2,7 @@
 
 import Box from '@mui/material/Box';
 import { useTheme } from '@mui/material/styles';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material';
 
 import { DashboardContent } from 'src/layouts/dashboard';
 import { _appAuthors, _appRelated, _appInvoices, _appInstalled } from 'src/_mock';
