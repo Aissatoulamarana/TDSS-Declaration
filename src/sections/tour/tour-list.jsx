@@ -2,7 +2,7 @@ import * as React from 'react';
 import parse from 'autosuggest-highlight/parse';
 
 import Box from '@mui/material/Box';
-import { Grid } from '@mui/material';
+import { Grid2 } from '@mui/material';
 import { debounce } from '@mui/material/utils';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
@@ -120,11 +120,11 @@ export default function GoogleMaps() {
         );
         return (
           <li key={key} {...optionProps}>
-            <Grid container sx={{ alignItems: 'center' }}>
-              <Grid item sx={{ display: 'flex', width: 44 }}>
+            <Grid2 container sx={{ alignItems: 'center' }}>
+              <Grid2 item sx={{ display: 'flex', width: 44 }}>
                 <LocationOnIcon sx={{ color: 'text.secondary' }} />
-              </Grid>
-              <Grid item sx={{ width: 'calc(100% - 44px)', wordWrap: 'break-word' }}>
+              </Grid2>
+              <Grid2 item sx={{ width: 'calc(100% - 44px)', wordWrap: 'break-word' }}>
                 {parts.map((part, index) => (
                   <Box
                     key={index}
@@ -137,8 +137,8 @@ export default function GoogleMaps() {
                 <Typography variant="body2" sx={{ color: 'text.secondary' }}>
                   {option.structured_formatting.secondary_text}
                 </Typography>
-              </Grid>
-            </Grid>
+              </Grid2>
+            </Grid2>
           </li>
         );
       }}

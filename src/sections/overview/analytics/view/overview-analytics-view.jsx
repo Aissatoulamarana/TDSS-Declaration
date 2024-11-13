@@ -1,7 +1,7 @@
 'use client';
 
 
-import { Grid } from '@mui/material';
+import { Grid2 } from '@mui/material';
 
 import { _appInvoices } from 'src/_mock';
 import { CONFIG } from 'src/config-global';
@@ -18,71 +18,71 @@ import { AnalyticsCurrentDownload } from '../analytics-current-download';
 export function OverviewAnalyticsView() {
   return (
     <DashboardContent maxWidth="xl">
-      <Grid container spacing={3}>
-        <Grid xs={12} sm={6} md={3}>
+      <Grid2 container spacing={3}>
+        <Grid2 size={{ xs: 6, md: 3 }}>
           <AnalyticsWidgetSummary
             title="Nombres Employés déclarés"
             percent={2.6}
             total={714000}
             icon={
-              <Image alt="icon" src={`${CONFIG.assetsDir}/assets/icons/glass/ic-glass-people.svg`} />
+              <img alt="icon" src={`${CONFIG.assetsDir}/assets/icons/glass/ic-glass-people.svg`} />
             }
             chart={{
               categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
               series: [22, 8, 35, 50, 82, 84, 77, 12],
             }}
           />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} sm={6} md={3}>
+        <Grid2 size={{ xs: 6, md: 3 }}>
           <AnalyticsWidgetSummary
             title="Nombres d'employés déclarés"
             percent={-0.1}
             total={1352831}
             color="secondary"
             icon={
-              <Image alt="icon" src={`${CONFIG.assetsDir}/assets/icons/glass/ic-glass-users.svg`} />
+              <img alt="icon" src={`${CONFIG.assetsDir}/assets/icons/glass/ic-glass-users.svg`} />
             }
             chart={{
               categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
               series: [56, 47, 40, 62, 73, 30, 23, 54],
             }}
           />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} sm={6} md={3}>
+        <Grid2 size={{ xs: 6, md: 3 }}>
           <AnalyticsWidgetSummary
             title="Paiements"
             percent={2.8}
             total={1723315}
             color="warning"
             icon={
-              <Image alt="icon" src={`${CONFIG.assetsDir}/assets/icons/glass/ic-glass-buy.svg`} />
+              <img alt="icon" src={`${CONFIG.assetsDir}/assets/icons/glass/ic-glass-buy.svg`} />
             }
             chart={{
               categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
               series: [40, 70, 50, 28, 70, 75, 7, 64],
             }}
           />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} sm={6} md={3}>
+        <Grid2 size={{ xs: 6, md: 3 }}>
           <AnalyticsWidgetSummary
             title="Factures"
             percent={3.6}
             total={234}
             color="error"
             icon={
-              <Image alt="icon" src={`${CONFIG.assetsDir}/assets/icons/glass/ic-glass-message.svg`} />
+              <img alt="icon" src={`${CONFIG.assetsDir}/assets/icons/glass/ic-glass-message.svg`} />
             }
             chart={{
               categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
               series: [56, 30, 23, 54, 47, 40, 62, 73],
             }}
           />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} md={4} lg={6}>
+        <Grid2 size={{ xs: 6, md: 6 }}>
           <AnalyticsCurrentVisits
             title="Déclarations"
             chart={{
@@ -93,8 +93,8 @@ export function OverviewAnalyticsView() {
               ],
             }}
           />
-        </Grid>
-        <Grid xs={12} md={4} lg={6}>
+        </Grid2>
+        <Grid2 size={{ xs: 6, md: 6 }}>
           <AnalyticsCurrentDownload
             title=" Types Déclarations"
             chart={{
@@ -105,9 +105,9 @@ export function OverviewAnalyticsView() {
               ],
             }}
           />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} md={6} lg={12}>
+        <Grid2 size={{ xs: 6, md: 12 }}>
           <AnalyticsWebsiteVisits
             title="Déclarations"
             subheader="(+43%) than last year"
@@ -121,9 +121,9 @@ export function OverviewAnalyticsView() {
               ],
             }}
           />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} lg={6}>
+        <Grid2 size={{ xs: 6, md: 6 }}>
           <AnalyticsNewInvoice
             title="Statistiques des Entreprises"
             tableData={_appInvoices}
@@ -136,8 +136,8 @@ export function OverviewAnalyticsView() {
               { id: '' },
             ]}
           />
-        </Grid>
-        <Grid xs={12} lg={6}>
+        </Grid2>
+        <Grid2 size={{ xs: 6, md: 6 }}>
           <AnalyticsNewInvoice
             title="Statistiques Par Nationalités"
             tableData={_appInvoices}
@@ -150,9 +150,9 @@ export function OverviewAnalyticsView() {
               { id: '' },
             ]}
           />
-        </Grid>
+        </Grid2>
 
-        {/*  <Grid xs={12} md={6} lg={8}>
+        {/*  <Grid2 xs={12} md={6} lg={8}>
           <AnalyticsWebsiteVisits
             title="Factures"
             subheader=""
@@ -165,9 +165,9 @@ export function OverviewAnalyticsView() {
               ],
             }}
           />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} md={6} lg={8}>
+        <Grid2 xs={12} md={6} lg={8}>
           <AnalyticsConversionRates
             title="Pays"
             subheader="(+43%) than last year"
@@ -179,9 +179,9 @@ export function OverviewAnalyticsView() {
               ],
             }}
           />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} md={6} lg={4}>
+        <Grid2 xs={12} md={6} lg={4}>
           <AnalyticsCurrentSubject
             title="Current subject"
             chart={{
@@ -193,24 +193,24 @@ export function OverviewAnalyticsView() {
               ],
             }}
           />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} md={6} lg={8}>
+        <Grid2 xs={12} md={6} lg={8}>
           <AnalyticsNews title="News" list={_analyticPosts} />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} md={6} lg={4}>
+        <Grid2 xs={12} md={6} lg={4}>
           <AnalyticsOrderTimeline title="Order timeline" list={_analyticOrderTimeline} />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} md={6} lg={4}>
+        <Grid2 xs={12} md={6} lg={4}>
           <AnalyticsTrafficBySite title="Traffic by site" list={_analyticTraffic} />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} md={6} lg={8}>
+        <Grid2 xs={12} md={6} lg={8}>
           <AnalyticsTasks title="Tasks" list={_analyticTasks} />
-        </Grid> */}
-      </Grid>
+        </Grid2> */}
+      </Grid2>
     </DashboardContent>
   );
 }

@@ -2,7 +2,7 @@ import { m } from 'framer-motion';
 
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import { Grid } from '@mui/material';
+import { Grid2 } from '@mui/material';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
@@ -113,15 +113,15 @@ export function HomeMinimal({ sx, ...other }) {
         {renderLines}
 
         <Container sx={{ position: 'relative' }}>
-          <Grid container columnSpacing={{ xs: 0, md: 8 }} sx={{ position: 'relative', zIndex: 9 }}>
-            <Grid xs={12} md={6} lg={7}>
+          <Grid2 container columnSpacing={{ xs: 0, md: 8 }} sx={{ position: 'relative', zIndex: 9 }}>
+            <Grid2 xs={12} md={6} lg={7}>
               {renderDescription}
-            </Grid>
+            </Grid2>
 
-            <Grid md={6} lg={5} sx={{ display: { xs: 'none', md: 'block' } }}>
+            <Grid2 md={6} lg={5} sx={{ display: { xs: 'none', md: 'block' } }}>
               {renderImg}
-            </Grid>
-          </Grid>
+            </Grid2>
+          </Grid2>
 
           <CircleSvg variants={varFade().in} sx={{ display: { xs: 'none', md: 'block' } }} />
         </Container>

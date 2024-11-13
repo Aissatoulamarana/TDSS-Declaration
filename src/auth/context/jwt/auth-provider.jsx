@@ -1,4 +1,4 @@
-'use client';
+'use client'
 
 import { useMemo, useEffect, useCallback } from 'react';
 
@@ -7,7 +7,6 @@ import { AuthContext } from '../auth-context';
 import { setSession, isValidToken } from './utils';
 import axios, { endpoints } from '../../../utils/axios';
 import { useSetState } from '../../../hooks/use-set-state';
-
 
 // ----------------------------------------------------------------------
 
@@ -33,7 +32,12 @@ export function AuthProvider({ children }) {
         setState({ user: null, loading: false });
       }
     } catch (error) {
-      console.error(error);
+      // Improved error handling
+      if (axios.isAxiosError(error)) {
+        console.error('Axios error:', error.response ? error.response.data : error.message);
+      } else {
+        console.error('Unexpected error:', error.message || error);
+      }
       setState({ user: null, loading: false });
     }
   }, [setState]);

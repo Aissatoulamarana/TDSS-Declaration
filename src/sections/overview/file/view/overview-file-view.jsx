@@ -3,7 +3,7 @@
 import { useState, useCallback } from 'react';
 
 import Box from '@mui/material/Box';
-import { Grid } from '@mui/material';
+import { Grid2 } from '@mui/material';
 import Typography from '@mui/material/Typography';
 
 import { paths } from 'src/routes/paths';
@@ -97,39 +97,39 @@ export function OverviewFileView() {
   return (
     <>
       <DashboardContent maxWidth="xl">
-        <Grid container spacing={3}>
-          <Grid xs={12} sx={{ display: { xs: 'block', sm: 'none' } }}>
+        <Grid2 container spacing={3}>
+          <Grid2 xs={12} sx={{ display: { xs: 'block', sm: 'none' } }}>
             {renderStorageOverview}
-          </Grid>
+          </Grid2>
 
-          <Grid xs={12} sm={6} md={4}>
+          <Grid2 xs={12} sm={6} md={4}>
             <FileWidget
               title="Dropbox"
               value={GB / 10}
               total={GB}
               icon={`${CONFIG.assetsDir}/assets/icons/apps/ic-app-dropbox.svg`}
             />
-          </Grid>
+          </Grid2>
 
-          <Grid xs={12} sm={6} md={4}>
+          <Grid2 xs={12} sm={6} md={4}>
             <FileWidget
               title="Drive"
               value={GB / 5}
               total={GB}
               icon={`${CONFIG.assetsDir}/assets/icons/apps/ic-app-drive.svg`}
             />
-          </Grid>
+          </Grid2>
 
-          <Grid xs={12} sm={6} md={4}>
+          <Grid2 xs={12} sm={6} md={4}>
             <FileWidget
               title="OneDrive"
               value={GB / 2}
               total={GB}
               icon={`${CONFIG.assetsDir}/assets/icons/apps/ic-app-onedrive.svg`}
             />
-          </Grid>
+          </Grid2>
 
-          <Grid xs={12} md={6} lg={8}>
+          <Grid2 xs={12} md={6} lg={8}>
             <FileDataActivity
               title="Data activity"
               chart={{
@@ -204,9 +204,9 @@ export function OverviewFileView() {
                 ))}
               </Box>
             </Box>
-          </Grid>
+          </Grid2>
 
-          <Grid xs={12} md={6} lg={4}>
+          <Grid2 xs={12} md={6} lg={4}>
             <Box sx={{ gap: 3, display: 'flex', flexDirection: 'column' }}>
               <UploadBox
                 onDrop={handleDrop}
@@ -236,8 +236,8 @@ export function OverviewFileView() {
 
               <FileUpgrade />
             </Box>
-          </Grid>
-        </Grid>
+          </Grid2>
+        </Grid2>
       </DashboardContent>
 
       <FileManagerNewFolderDialog open={upload.value} onClose={upload.onFalse} />

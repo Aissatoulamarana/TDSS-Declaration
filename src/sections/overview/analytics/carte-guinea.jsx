@@ -1,145 +1,54 @@
-import * as React from 'react';
-import parse from 'autosuggest-highlight/parse';
+import React  from 'react';
+import { scaleLinear } from 'd3-scale';
+import { Geography, Geographies, ComposableMap } from "react-simple-maps";
 
-import Box from '@mui/material/Box';
-import { Grid } from '@mui/material';
-import { debounce } from '@mui/material/utils';
-import TextField from '@mui/material/TextField';
-import Typography from '@mui/material/Typography';
-import Autocomplete from '@mui/material/Autocomplete';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
 
-// This key was created specifically for the demo in mui.com.
-// You need to create a new one for your application.
-const GOOGLE_MAPS_API_KEY = 'AIzaSyDDdr7mfflZBbQS4dJhhGPQMT91sYPclZI';
+// Données de statistiques par région
+const data = {
+  'Conakry': 120,
+  'Kindia': 80,
+  'Mamou': 50,
+  // Ajoutez les autres régions avec leurs statistiques ici
+};
 
-function loadScript(src, position, id) {
-  if (!position) {
-    return;
-  }
+// Définir une échelle de couleurs en fonction des statistiques
+const colorScale = scaleLinear()
+  .domain([0, Math.max(...Object.values(data))])
+  .range(["#D3E5FF", "#08306B"]);
 
-  const script = document.createElement('script');
-  script.setAttribute('async', '');
-  script.setAttribute('id', id);
-  script.src = src;
-  position.appendChild(script);
-}
+// URL du fichier GeoJSON de la Guinée
+const geoUrl = "https://geojson.io/#map=6.85/9.944/-11.407";
 
-const autocompleteService = { current: null };
-
-export function GoogleMaps() {
-  const [value, setValue] = React.useState(null);
-  const [inputValue, setInputValue] = React.useState('');
-  const [options, setOptions] = React.useState([]);
-  const loaded = React.useRef(false);
-
-  if (typeof window !== 'undefined' && !loaded.current) {
-    if (!document.querySelector('#google-maps')) {
-      loadScript(
-        `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAPS_API_KEY}&libraries=places`,
-        document.querySelector('head'),
-        'google-maps'
-      );
-    }
-
-    loaded.current = true;
-  }
-
-  const fetch = React.useMemo(
-    () =>
-      debounce((request, callback) => {
-        autocompleteService.current.getPlacePredictions(request, callback);
-      }, 400),
-    []
-  );
-
-  React.useEffect(() => {
-    let active = true;
-
-    if (!autocompleteService.current && window.google) {
-      autocompleteService.current = new window.google.maps.places.AutocompleteService();
-    }
-    if (!autocompleteService.current) {
-      return undefined;
-    }
-
-    if (inputValue === '') {
-      setOptions(value ? [value] : []);
-      return undefined;
-    }
-
-    fetch({ input: inputValue }, (results) => {
-      if (active) {
-        let newOptions = [];
-
-        if (value) {
-          newOptions = [value];
-        }
-
-        if (results) {
-          newOptions = [...newOptions, ...results];
-        }
-
-        setOptions(newOptions);
-      }
-    });
-
-    return () => {
-      active = false;
-    };
-  }, [value, inputValue, fetch]);
-
+export function GuineaMap() {
   return (
-    <Autocomplete
-      sx={{ width: 300 }}
-      getOptionLabel={(option) => (typeof option === 'string' ? option : option.description)}
-      filterOptions={(x) => x}
-      options={options}
-      autoComplete
-      includeInputInList
-      filterSelectedOptions
-      value={value}
-      noOptionsText="No locations"
-      onChange={(event, newValue) => {
-        setOptions(newValue ? [newValue, ...options] : options);
-        setValue(newValue);
-      }}
-      onInputChange={(event, newInputValue) => {
-        setInputValue(newInputValue);
-      }}
-      renderInput={(params) => <TextField {...params} label="Add a location" fullWidth />}
-      renderOption={(props, option) => {
-        const { key, ...optionProps } = props;
-        const matches = option.structured_formatting.main_text_matched_substrings || [];
+    <ComposableMap projection="geoMercator" width={800} height={600}>
+      <Geographies geography={geoUrl}>
+        {({ geographies }) =>
+          geographies.map((geo) => {
+            const regionName = geo.properties.NAME_1; // Vérifiez l'attribut du GeoJSON pour le nom des régions
+            const regionData = data[regionName] || 0;
 
-        const parts = parse(
-          option.structured_formatting.main_text,
-          matches.map((match) => [match.offset, match.offset + match.length])
-        );
-        return (
-          <li key={key} {...optionProps}>
-            <Grid container sx={{ alignItems: 'center' }}>
-              <Grid item sx={{ display: 'flex', width: 44 }}>
-                <LocationOnIcon sx={{ color: 'text.secondary' }} />
-              </Grid>
-              <Grid item sx={{ width: 'calc(100% - 44px)', wordWrap: 'break-word' }}>
-                {parts.map((part, index) => (
-                  <Box
-                    key={index}
-                    component="span"
-                    sx={{ fontWeight: part.highlight ? 'bold' : 'regular' }}
-                  >
-                    {part.text}
-                  </Box>
-                ))}
-                <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                  {option.structured_formatting.secondary_text}
-                </Typography>
-              </Grid>
-            </Grid>
-          </li>
-        );
-      }}
-    />
+            return (
+              <Geography
+                key={geo.rsmKey}
+                geography={geo}
+                fill={colorScale(regionData)}
+                onMouseEnter={() => {
+                  // Optionnel : Afficher les infos de la région
+                  console.log(`${regionName}: ${regionData}`);
+                }}
+                style={{
+                  default: { outline: 'none' },
+                  hover: { fill: "#F53", outline: 'none' },
+                  pressed: { outline: 'none' },
+                }}
+              />
+            );
+          })
+        }
+      </Geographies>
+    </ComposableMap>
   );
 }
+
+

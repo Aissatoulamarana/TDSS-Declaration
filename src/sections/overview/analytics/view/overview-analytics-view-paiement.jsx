@@ -1,12 +1,12 @@
 'use client';
 
-import { Grid } from '@mui/material';
+import { Grid2 } from '@mui/material';
 
 import { _appInvoices } from 'src/_mock';
 import { CONFIG } from 'src/config-global';
 import { DashboardContent } from 'src/layouts/dashboard';
 
-import { GoogleMaps } from '../carte-guinea';
+import { GuineaMap } from '../carte-guinea';
 import { AnalyticsNewInvoice } from '../analytics-new-invoice';
 import { AnalyticsCurrentVisits } from '../analytics-current-visits';
 import { AnalyticsWebsiteVisits } from '../analytics-website-visits';
@@ -18,8 +18,8 @@ import { AnalyticsCurrentDownload } from '../analytics-current-download';
 export function AnalyticPaiementView() {
   return (
     <DashboardContent maxWidth="xl">
-      <Grid container spacing={3}>
-        <Grid xs={12} sm={6} md={6}>
+      <Grid2 container spacing={3}>
+        <Grid2 size={{ xs: 6, md: 6}}>
           <AnalyticsWidgetSummary
             title="Montant Total Payé"
             percent={2.6}
@@ -32,9 +32,9 @@ export function AnalyticPaiementView() {
               series: [22, 8, 35, 50, 82, 84, 77, 12],
             }}
           />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} sm={6} md={6}>
+        <Grid2 size={{ xs: 6, md: 6 }}>
           <AnalyticsWidgetSummary
             title="En Attente d'encaissement"
             percent={2.8}
@@ -48,11 +48,11 @@ export function AnalyticPaiementView() {
               series: [40, 70, 50, 28, 70, 75, 7, 64],
             }}
           />
-        </Grid>
-        <Grid xs={12} md={8} lg={12}>
-          <GoogleMaps />
-        </Grid>
-        <Grid xs={12} md={4} lg={6}>
+        </Grid2>
+        <Grid2 size={{ xs: 6, md: 6 }}>
+          <GuineaMap />
+        </Grid2>
+        <Grid2 size={{ xs: 6, md: 6 }}>
           <AnalyticsCurrentVisits
             title="Montant collectés par banque"
             chart={{
@@ -63,8 +63,8 @@ export function AnalyticPaiementView() {
               ],
             }}
           />
-        </Grid>
-        <Grid xs={12} md={4} lg={6}>
+        </Grid2>
+        <Grid2 size={{ xs: 6, md: 6 }}>
           <AnalyticsCurrentDownload
             title="Montant Collectés par type de déclaration"
             chart={{
@@ -75,8 +75,8 @@ export function AnalyticPaiementView() {
               ],
             }}
           />
-        </Grid>
-        <Grid xs={12} md={6} lg={12}>
+        </Grid2>
+        <Grid2 size={{ xs: 6, md: 6 }}>
           <AnalyticsWebsiteVisits
             title="Statistiques Paiements "
             subheader="(+43%) than last year"
@@ -89,9 +89,9 @@ export function AnalyticPaiementView() {
               ],
             }}
           />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} lg={12}>
+        <Grid2 size={{ xs: 6, md: 12 }}>
           <AnalyticsNewInvoice
             title="Derniers Paiements"
             tableData={_appInvoices}
@@ -103,8 +103,8 @@ export function AnalyticPaiementView() {
               { id: '' },
             ]}
           />
-        </Grid>
-      </Grid>
+        </Grid2>
+      </Grid2>
     </DashboardContent>
   );
 }

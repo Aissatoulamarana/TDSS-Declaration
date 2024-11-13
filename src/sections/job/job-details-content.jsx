@@ -3,7 +3,7 @@ import Card from '@mui/material/Card';
 import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import Avatar from '@mui/material/Avatar';
-import { Grid } from '@mui/material';
+import { Grid2 } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import ListItemText from '@mui/material/ListItemText';
 
@@ -106,16 +106,16 @@ export function JobDetailsContent({ job }) {
   );
 
   return (
-    <Grid container spacing={3}>
-      <Grid xs={12} md={8}>
+    <Grid2 container spacing={3}>
+      <Grid2 xs={12} md={8}>
         {renderContent}
-      </Grid>
+      </Grid2>
 
-      <Grid xs={12} md={4}>
+      <Grid2 xs={12} md={4}>
         {renderOverview}
 
         {renderCompany}
-      </Grid>
-    </Grid>
+      </Grid2>
+    </Grid2>
   );
 }

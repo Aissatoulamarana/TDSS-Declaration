@@ -1,7 +1,7 @@
 import { useRef, useState, forwardRef } from 'react';
 import { m, useSpring, useScroll, useTransform, useMotionValueEvent } from 'framer-motion';
 
-import { Grid } from '@mui/material';
+import { Grid2 } from '@mui/material';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
@@ -37,18 +37,18 @@ export function HomeHugePackElements({ sx, ...other }) {
         {renderLines}
 
         <Container sx={{ textAlign: { xs: 'center', md: 'left' } }}>
-          <Grid
+          <Grid2
             container
             disableEqualOverflow
             rowSpacing={{ xs: 3, md: 0 }}
             columnSpacing={{ xs: 0, md: 8 }}
           >
-            <Grid xs={12} md={6} lg={7}>
+            <Grid2 xs={12} md={6} lg={7}>
               <SectionCaption title="Interface Starter Kit" />
               <SectionTitle title="Large bundle of" txtGradient="elements" sx={{ mt: 3 }} />
-            </Grid>
+            </Grid2>
 
-            <Grid xs={12} md={6} lg={5}>
+            <Grid2 xs={12} md={6} lg={5}>
               <m.div variants={varFade({ distance: 24 }).inUp}>
                 <Typography
                   sx={{
@@ -64,8 +64,8 @@ export function HomeHugePackElements({ sx, ...other }) {
                   like menus, sliders, buttons, inputs, and others, all conveniently gathered here.
                 </Typography>
               </m.div>
-            </Grid>
-          </Grid>
+            </Grid2>
+          </Grid2>
 
           <m.div variants={varFade({ distance: 24 }).inUp}>
             <Button

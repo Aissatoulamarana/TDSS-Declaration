@@ -5,7 +5,7 @@ import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 import Checkbox from '@mui/material/Checkbox';
-import { Grid } from '@mui/material';
+import { Grid2 } from '@mui/material';
 import CardHeader from '@mui/material/CardHeader';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemIcon from '@mui/material/ListItemIcon';
@@ -117,10 +117,10 @@ export function EnhancedTransferList() {
   );
 
   return (
-    <Grid container justifyContent="center" alignItems="center" sx={{ width: 'auto', p: 3 }}>
-      <Grid>{customList('Choices', left)}</Grid>
+    <Grid2 container justifyContent="center" alignItems="center" sx={{ width: 'auto', p: 3 }}>
+      <Grid2>{customList('Choices', left)}</Grid>
 
-      <Grid container direction="column" alignItems="center" sx={{ p: 3 }}>
+      <Grid2 container direction="column" alignItems="center" sx={{ p: 3 }}>
         <Button
           color="inherit"
           variant="outlined"
@@ -144,9 +144,9 @@ export function EnhancedTransferList() {
         >
           <Iconify icon="eva:arrow-ios-back-fill" width={18} />
         </Button>
-      </Grid>
+      </Grid2>
 
-      <Grid>{customList('Chosen', right)}</Grid>
-    </Grid>
+      <Grid2>{customList('Chosen', right)}</Grid>
+    </Grid2>
   );
 }

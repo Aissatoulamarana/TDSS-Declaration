@@ -1,5 +1,5 @@
-import { Grid } from '@mui/material';
 import Box from '@mui/material/Box';
+import { Grid2 } from '@mui/material';
 import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
@@ -56,7 +56,7 @@ export function Footer({ layoutQuery, sx }) {
       >
         <Logo />
 
-        <Grid
+        <Grid2
           container
           sx={{
             mt: 3,
@@ -64,7 +64,7 @@ export function Footer({ layoutQuery, sx }) {
             [theme.breakpoints.up(layoutQuery)]: { justifyContent: 'space-between' },
           }}
         >
-          <Grid {...{ xs: 12, [layoutQuery]: 3 }}>
+          <Grid2 {...{ xs: 12, [layoutQuery]: 3 }}>
             <Typography
               variant="body2"
               sx={{
@@ -95,9 +95,9 @@ export function Footer({ layoutQuery, sx }) {
                 </IconButton>
               ))}
             </Stack>
-          </Grid>
+          </Grid2>
 
-          <Grid {...{ xs: 12, [layoutQuery]: 6 }}>
+          <Grid2 {...{ xs: 12, [layoutQuery]: 6 }}>
             <Stack
               spacing={5}
               sx={{
@@ -133,8 +133,8 @@ export function Footer({ layoutQuery, sx }) {
                 </Stack>
               ))}
             </Stack>
-          </Grid>
-        </Grid>
+          </Grid2>
+        </Grid2>
 
         <Typography variant="body2" sx={{ mt: 10 }}>
           © All rights reserved.

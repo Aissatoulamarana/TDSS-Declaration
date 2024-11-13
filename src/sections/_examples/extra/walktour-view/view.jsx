@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import Switch from '@mui/material/Switch';
 import { useTheme } from '@mui/material/styles';
 import Container from '@mui/material/Container';
-import { Grid } from '@mui/material';
+import { Grid2 } from '@mui/material';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 
@@ -224,8 +224,8 @@ export function WalktourView() {
           </Button>
         </Stack>
 
-        <Grid container spacing={3}>
-          <Grid xs={12} md={8}>
+        <Grid2 container spacing={3}>
+          <Grid2 xs={12} md={8}>
             <EcommerceWelcome
               id="demo__1"
               title={`Congratulations 🎉  \n Jaydon Frankie`}
@@ -237,13 +237,13 @@ export function WalktourView() {
                 </Button>
               }
             />
-          </Grid>
+          </Grid2>
 
-          <Grid xs={12} md={4}>
+          <Grid2 xs={12} md={4}>
             <EcommerceNewProducts id="demo__2" list={_ecommerceNewProducts} />
-          </Grid>
+          </Grid2>
 
-          <Grid xs={12} md={4}>
+          <Grid2 xs={12} md={4}>
             <EcommerceWidgetSummary
               title="Product sold"
               percent={2.6}
@@ -253,9 +253,9 @@ export function WalktourView() {
                 series: [22, 8, 35, 50, 82, 84, 77, 12],
               }}
             />
-          </Grid>
+          </Grid2>
 
-          <Grid xs={12} md={4}>
+          <Grid2 xs={12} md={4}>
             <EcommerceWidgetSummary
               id="demo__3"
               title="Total balance"
@@ -267,9 +267,9 @@ export function WalktourView() {
                 series: [56, 47, 40, 62, 73, 30, 23, 54],
               }}
             />
-          </Grid>
+          </Grid2>
 
-          <Grid xs={12} md={4}>
+          <Grid2 xs={12} md={4}>
             <EcommerceWidgetSummary
               title="Sales profit"
               percent={0.6}
@@ -280,9 +280,9 @@ export function WalktourView() {
                 series: [40, 70, 75, 70, 50, 28, 7, 64],
               }}
             />
-          </Grid>
+          </Grid2>
 
-          <Grid xs={12} md={6} lg={4}>
+          <Grid2 xs={12} md={6} lg={4}>
             <EcommerceSaleByGender
               title="Sale by gender"
               total={2324}
@@ -294,9 +294,9 @@ export function WalktourView() {
                 ],
               }}
             />
-          </Grid>
+          </Grid2>
 
-          <Grid xs={12} md={6} lg={8}>
+          <Grid2 xs={12} md={6} lg={8}>
             {/* <EcommerceYearlySales
               id="demo__4"
               title="Yearly sales"
@@ -346,13 +346,13 @@ export function WalktourView() {
                 ],
               }}
             /> */}
-          </Grid>
+          </Grid2>
 
-          <Grid xs={12} md={6} lg={8}>
+          <Grid2 xs={12} md={6} lg={8}>
             <EcommerceSalesOverview title="Sales overview" data={_ecommerceSalesOverview} />
-          </Grid>
+          </Grid2>
 
-          <Grid xs={12} md={6} lg={4}>
+          <Grid2 xs={12} md={6} lg={4}>
             <EcommerceCurrentBalance
               title="Current balance"
               earning={25500}
@@ -360,9 +360,9 @@ export function WalktourView() {
               orderTotal={287650}
               currentBalance={187650}
             />
-          </Grid>
+          </Grid2>
 
-          <Grid xs={12} md={6} lg={8}>
+          <Grid2 xs={12} md={6} lg={8}>
             <EcommerceBestSalesman
               title="Best salesman"
               tableData={_ecommerceBestSalesman}
@@ -374,16 +374,16 @@ export function WalktourView() {
                 { id: 'rank', label: 'Rank', align: 'right' },
               ]}
             />
-          </Grid>
+          </Grid2>
 
-          {/* <Grid xs={12} md={6} lg={4}>
+          {/* <Grid2 xs={12} md={6} lg={4}>
             <EcommerceLatestProducts
               id="demo__5"
               title="Latest products"
               list={_ecommerceLatestProducts}
             />
-          </Grid> */}
-        </Grid>
+          </Grid2> */}
+        </Grid2>
       </Container>
     </>
   );

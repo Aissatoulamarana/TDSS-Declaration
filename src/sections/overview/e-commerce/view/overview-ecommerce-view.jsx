@@ -28,8 +28,8 @@ export function OverviewEcommerceView() {
 
   return (
     <DashboardContent maxWidth="xl">
-      <Grid container spacing={3}>
-        <Grid xs={12} md={8}>
+      <Grid2 container spacing={3}>
+        <Grid2 xs={12} md={8}>
           <EcommerceWelcome
             title={`Congratulations 🎉  \n ${user?.displayName}`}
             description="Best seller of the month you have done 57.6% more sales today."
@@ -40,13 +40,13 @@ export function OverviewEcommerceView() {
               </Button>
             }
           />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} md={4}>
+        <Grid2 xs={12} md={4}>
           <EcommerceNewProducts list={_ecommerceNewProducts} />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} md={4}>
+        <Grid2 xs={12} md={4}>
           <EcommerceWidgetSummary
             title="Product sold"
             percent={2.6}
@@ -56,9 +56,9 @@ export function OverviewEcommerceView() {
               series: [22, 8, 35, 50, 82, 84, 77, 12],
             }}
           />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} md={4}>
+        <Grid2 xs={12} md={4}>
           <EcommerceWidgetSummary
             title="Total balance"
             percent={-0.1}
@@ -69,9 +69,9 @@ export function OverviewEcommerceView() {
               series: [56, 47, 40, 62, 73, 30, 23, 54],
             }}
           />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} md={4}>
+        <Grid2 xs={12} md={4}>
           <EcommerceWidgetSummary
             title="Sales profit"
             percent={0.6}
@@ -82,9 +82,9 @@ export function OverviewEcommerceView() {
               series: [40, 70, 75, 70, 50, 28, 7, 64],
             }}
           />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} md={6} lg={4}>
+        <Grid2 xs={12} md={6} lg={4}>
           <EcommerceSaleByGender
             title="Sale by gender"
             total={2324}
@@ -96,9 +96,9 @@ export function OverviewEcommerceView() {
               ],
             }}
           />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} md={6} lg={8}>
+        <Grid2 xs={12} md={6} lg={8}>
           <EcommerceYearlySales
             title="Yearly sales"
             subheader="(+43%) than last year"
@@ -147,13 +147,13 @@ export function OverviewEcommerceView() {
               ],
             }}
           />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} md={6} lg={8}>
+        <Grid2 xs={12} md={6} lg={8}>
           <EcommerceSalesOverview title="Sales overview" data={_ecommerceSalesOverview} />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} md={6} lg={4}>
+        <Grid2 xs={12} md={6} lg={4}>
           <EcommerceCurrentBalance
             title="Current balance"
             earning={25500}
@@ -161,9 +161,9 @@ export function OverviewEcommerceView() {
             orderTotal={287650}
             currentBalance={187650}
           />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} md={6} lg={8}>
+        <Grid2 xs={12} md={6} lg={8}>
           <EcommerceBestSalesman
             title="Best salesman"
             tableData={_ecommerceBestSalesman}
@@ -175,16 +175,16 @@ export function OverviewEcommerceView() {
               { id: 'rank', label: 'Rank', align: 'right' },
             ]}
           />
-        </Grid>
+        </Grid2>
 
-        {/* <Grid xs={12} md={6} lg={4}>
+        {/* <Grid2 xs={12} md={6} lg={4}>
             <EcommerceLatestProducts
               id="demo__5"
               title="Latest products"
               list={_ecommerceLatestProducts}
             />
-          </Grid> }
-      </Grid>
+          </Grid2> }
+      </Grid2>
     </DashboardContent>
   );
 }

@@ -1,7 +1,7 @@
 'use client';
 
 import Box from '@mui/material/Box';
-import { Grid } from '@mui/material';
+import { Grid2 } from '@mui/material';
 
 import { DashboardContent } from 'src/layouts/dashboard';
 import { _bookings, _bookingNew, _bookingReview, _bookingsOverview } from 'src/_mock';
@@ -26,36 +26,36 @@ import { BookingCustomerReviews } from '../booking-customer-reviews';
 export function OverviewBookingView() {
   return (
     <DashboardContent maxWidth="xl">
-      <Grid container spacing={3} disableEqualOverflow>
-        <Grid xs={12} md={4}>
+      <Grid2 container spacing={3} disableEqualOverflow>
+        <Grid2 xs={12} md={4}>
           <BookingWidgetSummary
             title="Total booking"
             percent={2.6}
             total={714000}
             icon={<BookingIllustration />}
           />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} md={4}>
+        <Grid2 xs={12} md={4}>
           <BookingWidgetSummary
             title="Sold"
             percent={0.2}
             total={311000}
             icon={<CheckInIllustration />}
           />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} md={4}>
+        <Grid2 xs={12} md={4}>
           <BookingWidgetSummary
             title="Canceled"
             percent={-0.1}
             total={124000}
             icon={<CheckoutIllustration />}
           />
-        </Grid>
+        </Grid2>
 
-        <Grid container xs={12}>
-          <Grid xs={12} md={7} lg={8}>
+        <Grid2 container xs={12}>
+          <Grid2 xs={12} md={7} lg={8}>
             <Box
               sx={{
                 mb: 3,
@@ -136,9 +136,9 @@ export function OverviewBookingView() {
                 ],
               }}
             />
-          </Grid>
+          </Grid2>
 
-          <Grid xs={12} md={5} lg={4}>
+          <Grid2 xs={12} md={5} lg={4}>
             <Box sx={{ gap: 3, display: 'flex', flexDirection: 'column' }}>
               <BookingAvailable
                 title="Tours available"
@@ -156,18 +156,18 @@ export function OverviewBookingView() {
                 list={_bookingReview}
               />
             </Box>
-          </Grid>
-        </Grid>
+          </Grid2>
+        </Grid2>
 
-        <Grid xs={12}>
+        <Grid2 xs={12}>
           <BookingNewest
             title="Newest booking"
             subheader={`${_bookingNew.length} bookings`}
             list={_bookingNew}
           />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12}>
+        <Grid2 xs={12}>
           <BookingDetails
             title="Booking details"
             tableData={_bookings}
@@ -180,8 +180,8 @@ export function OverviewBookingView() {
               { id: '' },
             ]}
           />
-        </Grid>
-      </Grid>
+        </Grid2>
+      </Grid2>
     </DashboardContent>
   );
 }

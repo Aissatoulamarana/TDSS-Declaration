@@ -1,5 +1,3 @@
-import { paramCase } from 'src/utils/change-case';
-
 import { _id, _postTitles } from 'src/_mock/assets';
 
 // ----------------------------------------------------------------------
@@ -17,13 +15,13 @@ const ROOTS = {
 // ----------------------------------------------------------------------
 
 export const paths = {
-  comingSoon: '/coming-soon',
-  maintenance: '/maintenance',
-  pricing: '/pricing',
-  payment: '/payment',
-  about: '/about-us',
-  contact: '/contact-us',
-  faqs: '/faqs',
+  // comingSoon: '/coming-soon',
+  // maintenance: '/maintenance',
+  // pricing: '/pricing',
+  // payment: '/payment',
+  // about: '/about-us',
+  // contact: '/contact-us',
+  // faqs: '/faqs',
   page403: '/error/403',
   page404: '/error/404',
   page500: '/error/500',
@@ -34,7 +32,7 @@ export const paths = {
   minimalStore: 'https://mui.com/store/items/minimal-dashboard/',
   freeUI: 'https://mui.com/store/items/minimal-dashboard-free/',
   figmaUrl: 'https://www.figma.com/design/cAPz4pYPtQEXivqe11EcDE/%5BPreview%5D-Minimal-Web.v6.0.0',
-  product: {
+  /* product: {
     root: `/product`,
     checkout: `/product/checkout`,
     details: (id) => `/product/${id}`,
@@ -44,7 +42,7 @@ export const paths = {
     root: `/post`,
     details: (title) => `/post/${paramCase(title)}`,
     demo: { details: `/post/${paramCase(MOCK_TITLE)}` },
-  },
+  }, */
   // AUTH
   auth: {
     amplify: {
@@ -94,12 +92,9 @@ export const paths = {
   // DASHBOARD
   dashboard: {
     root: ROOTS.DASHBOARD,
-    mail: `${ROOTS.DASHBOARD}/mail`,
-    chat: `${ROOTS.DASHBOARD}/chat`,
-    blank: `${ROOTS.DASHBOARD}/blank`,
+
     kanban: `${ROOTS.DASHBOARD}/kanban`,
     calendar: `${ROOTS.DASHBOARD}/calendar`,
-    fileManager: `${ROOTS.DASHBOARD}/file-manager`,
     permission: `${ROOTS.DASHBOARD}/permission`,
     general: {
       app: `${ROOTS.DASHBOARD}/app`,
@@ -107,7 +102,7 @@ export const paths = {
       analytics: {
         root: `${ROOTS.DASHBOARD}/analytics`,
         factures: `${ROOTS.DASHBOARD}/analytics/factures`,
-        paiement: `${ROOTS.DASHBOARD}/analytics/paiement`,
+        payment: `${ROOTS.DASHBOARD}/analytics/payment`,
       },
       banking: `${ROOTS.DASHBOARD}/banking`,
       booking: `${ROOTS.DASHBOARD}/booking`,
@@ -141,7 +136,7 @@ export const paths = {
         edit: `${ROOTS.DASHBOARD}/invoice/${MOCK_ID}/edit`,
       },
     },
-    post: {
+    /*  post: {
       root: `${ROOTS.DASHBOARD}/post`,
       new: `${ROOTS.DASHBOARD}/post/new`,
       details: (title) => `${ROOTS.DASHBOARD}/post/${paramCase(title)}`,
@@ -150,7 +145,7 @@ export const paths = {
         details: `${ROOTS.DASHBOARD}/post/${paramCase(MOCK_TITLE)}`,
         edit: `${ROOTS.DASHBOARD}/post/${paramCase(MOCK_TITLE)}/edit`,
       },
-    },
+    }, */
 
     job: {
       root: `${ROOTS.DASHBOARD}/job`,

@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
-import { Grid } from '@mui/material';
+import { Grid2 } from '@mui/material';
 
 import { paths } from 'src/routes/paths';
 
@@ -117,20 +117,20 @@ export function HomeZoneUI({ sx, ...other }) {
         {renderLines}
 
         <Container sx={{ position: 'relative' }}>
-          <Grid
+          <Grid2
             container
             disableEqualOverflow
             spacing={{ xs: 5, md: 8 }}
             sx={{ position: 'relative', zIndex: 9 }}
           >
-            <Grid xs={12} md={6} lg={5}>
+            <Grid2 xs={12} md={6} lg={5}>
               {renderDescription}
-            </Grid>
+            </Grid2>
 
-            <Grid xs={12} md={6} lg={7}>
+            <Grid2 xs={12} md={6} lg={7}>
               {renderImg}
-            </Grid>
-          </Grid>
+            </Grid2>
+          </Grid2>
 
           <CircleSvg variants={varFade().in} sx={{ display: { xs: 'none', md: 'block' } }} />
         </Container>

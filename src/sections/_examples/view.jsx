@@ -3,6 +3,7 @@
 import { m } from 'framer-motion';
 
 import Box from '@mui/material/Box';
+import {Grid2 } from '@mui/material';
 import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
@@ -53,11 +54,11 @@ export function ComponentsView() {
                 </Typography>
               </Stack>
 
-              <Grid>
+              <Grid2>
                 {foundationNav.map((item) => (
                   <ComponentCard key={item.name} item={item} />
                 ))}
-              </Grid>
+              </Grid2>
             </Stack>
 
             <Stack spacing={3}>
@@ -89,11 +90,11 @@ export function ComponentsView() {
                 </Typography>
               </Stack>
 
-              <Grid>
+              <Grid2>
                 {orderBy(muiNav, ['name'], ['asc']).map((item) => (
                   <ComponentCard key={item.name} item={item} />
                 ))}
-              </Grid>
+              </Grid2>
             </Stack>
 
             <Stack spacing={3}>
@@ -105,11 +106,11 @@ export function ComponentsView() {
                 </Typography>
               </Stack>
 
-              <Grid>
+              <Grid2>
                 {orderBy(extraNav, ['name'], ['asc']).map((item) => (
                   <ComponentCard key={item.name} item={item} />
                 ))}
-              </Grid>
+              </Grid2>
             </Stack>
           </Stack>
         </Stack>

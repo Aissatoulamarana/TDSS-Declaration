@@ -1,7 +1,7 @@
 'use client';
 
 import Box from '@mui/material/Box';
-import { Grid } from '@mui/material';
+import { Grid2 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 
 import { DashboardContent } from 'src/layouts/dashboard';
@@ -14,8 +14,8 @@ export function OverviewPaiementView() {
   const theme = useTheme();
   return (
     <DashboardContent maxWidth="xl">
-      <Grid container spacing={3}>
-        <Grid xs={12} md={7} lg={12}>
+      <Grid2 container spacing={3}>
+        <Grid2 xs={12} md={7} lg={12}>
           <Box sx={{ gap: 3, display: 'flex', flexDirection: 'column' }}>
             <PaiementListView />
 
@@ -122,9 +122,9 @@ export function OverviewPaiementView() {
             />
             */}
           </Box>
-        </Grid>
+        </Grid2>
 
-        {/* <Grid xs={12} md={5} lg={4}>
+        {/* <Grid2 xs={12} md={5} lg={4}>
           <Box sx={{ gap: 3, display: 'flex', flexDirection: 'column' }}>
             <BankingCurrentBalance list={_bankingCreditCard} />
 
@@ -143,8 +143,8 @@ export function OverviewPaiementView() {
               imgUrl={`${CONFIG.assetsDir}/assets/illustrations/illustration-receipt.webp`}
             />
           </Box>
-        </Grid> */}
-      </Grid>
+        </Grid2> */}
+      </Grid2>
     </DashboardContent>
   );
 }

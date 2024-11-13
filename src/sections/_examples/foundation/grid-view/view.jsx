@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 import Radio from '@mui/material/Radio';
 import Paper from '@mui/material/Paper';
-import { Grid } from '@mui/material';
+import { Grid2 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import RadioGroup from '@mui/material/RadioGroup';
@@ -53,13 +53,13 @@ export function GridView() {
             Spacing: <strong>{theme.spacing(Number(spacing))}</strong>
           </Typography>
 
-          <Grid container spacing={spacing}>
+          <Grid2 container spacing={spacing}>
             {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((value) => (
-              <Grid key={value} xs={1}>
+              <Grid2 key={value} xs={1}>
                 <Paper sx={{ height: 80, boxShadow: theme.customShadows.z8 }} />
-              </Grid>
+              </Grid2>
             ))}
-          </Grid>
+          </Grid2>
 
           <RadioGroup
             row
@@ -80,15 +80,15 @@ export function GridView() {
         </ComponentBlock>
 
         <ComponentBlock title="Column" sx={{ flexDirection: 'column', alignItems: 'unset' }}>
-          <Grid container spacing={3}>
+          <Grid2 container spacing={3}>
             {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((value) => (
-              <Grid key={value} xs={column}>
+              <Grid2 key={value} xs={column}>
                 <Paper sx={{ py: 3, textAlign: 'center', boxShadow: theme.customShadows.z8 }}>
                   xs = {column}
                 </Paper>
-              </Grid>
+              </Grid2>
             ))}
-          </Grid>
+          </Grid2>
 
           <RadioGroup
             row

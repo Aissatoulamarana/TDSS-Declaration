@@ -29,7 +29,7 @@ module.exports = {
   rules: {
     'no-use-before-define': 0,
     'no-alert': 0,
-    camelcase: 0,
+    'camelcase': 0,
     'no-console': 0,
     'no-unused-vars': 0,
     'no-nested-ternary': 0,

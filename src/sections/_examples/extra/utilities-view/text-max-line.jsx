@@ -63,7 +63,7 @@ export function TextMaxLine() {
         title="As Link"
         sx={{ flexDirection: 'column', alignItems: 'unset', minWidth: 0 }}
       >
-        <Link href="#" color="primary" sx={{ maxWidth: 300, ...maxLine({ line: 3 }) }}>
+        <Link  color="primary" sx={{ maxWidth: 300, ...maxLine({ line: 3 }) }}>
           {content}
         </Link>
       </ComponentBlock>

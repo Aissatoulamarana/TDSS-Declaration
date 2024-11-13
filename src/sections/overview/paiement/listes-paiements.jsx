@@ -12,7 +12,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import TableBody from '@mui/material/TableBody';
 import { useTheme } from '@mui/material/styles';
-import { Grid } from '@mui/material';
+import { Grid2 } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 
 import { paths } from 'src/routes/paths';
@@ -197,8 +197,8 @@ export function PaiementListView() {
         />
 
         <Stack spacing={4}>
-          <Grid container spacing={3} sx={{ mb: { xs: 3, md: 5 } }} lg={12}>
-            <Grid xs={3} md={3} lg={4}>
+          <Grid2 container spacing={3} sx={{ mb: { xs: 3, md: 5 } }} lg={12}>
+            <Grid2 xs={3} md={3} lg={4}>
               <PaiementAnalytic
                 title="Total"
                 total={tableData.length}
@@ -209,8 +209,8 @@ export function PaiementListView() {
                   series: [20, 41, 63, 33, 28, 35, 50, 46],
                 }}
               />
-            </Grid>
-            <Grid xs={3} md={3} lg={4}>
+            </Grid2>
+            <Grid2 xs={3} md={3} lg={4}>
               <PaiementAnalytic
                 title="Payées"
                 percent={2.6}
@@ -220,8 +220,8 @@ export function PaiementListView() {
                   series: [15, 18, 12, 51, 68, 11, 39, 37],
                 }}
               />
-            </Grid>
-            <Grid xs={3} md={3} lg={4}>
+            </Grid2>
+            <Grid2 xs={3} md={3} lg={4}>
               <PaiementAnalytic
                 title="En attente"
                 percent={2.6}
@@ -232,8 +232,8 @@ export function PaiementListView() {
                   series: [18, 19, 31, 8, 16, 37, 12, 33],
                 }}
               />
-            </Grid>
-          </Grid>
+            </Grid2>
+          </Grid2>
         </Stack>
 
         <Card sx={{ mb: { xs: 3, md: 5 } }} lg={12}>

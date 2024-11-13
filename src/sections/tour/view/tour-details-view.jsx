@@ -1,6 +1,6 @@
 'use client';
 
-import { Grid } from '@mui/material';
+import { Grid2 } from '@mui/material';
 
 import { _appInvoices } from 'src/_mock';
 import { CONFIG } from 'src/config-global';
@@ -16,8 +16,8 @@ import { AnalyticsWidgetSummary } from '../../overview/analytics/analytics-widge
 export function TourDetailsView({ tour }) {
   return (
     <DashboardContent maxWidth="xl">
-      <Grid container spacing={3}>
-        <Grid xs={12} sm={6} md={4}>
+      <Grid2 container spacing={3}>
+        <Grid2 xs={12} sm={6} md={4}>
           <AnalyticsWidgetSummary
             title="Montant Total Facturé"
             percent={2.6}
@@ -30,9 +30,9 @@ export function TourDetailsView({ tour }) {
               series: [22, 8, 35, 50, 82, 84, 77, 12],
             }}
           />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} sm={6} md={4}>
+        <Grid2 xs={12} sm={6} md={4}>
           <AnalyticsWidgetSummary
             title="Factures Payées"
             percent={-0.1}
@@ -46,9 +46,9 @@ export function TourDetailsView({ tour }) {
               series: [56, 47, 40, 62, 73, 30, 23, 54],
             }}
           />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} sm={6} md={4}>
+        <Grid2 xs={12} sm={6} md={4}>
           <AnalyticsWidgetSummary
             title="En Attente de paiement"
             percent={2.8}
@@ -62,9 +62,9 @@ export function TourDetailsView({ tour }) {
               series: [40, 70, 50, 28, 70, 75, 7, 64],
             }}
           />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} md={6} lg={12}>
+        <Grid2 xs={12} md={6} lg={12}>
           <AnalyticsWebsiteVisits
             title="Statistiques factures "
             subheader="(+43%) than last year"
@@ -77,9 +77,9 @@ export function TourDetailsView({ tour }) {
               ],
             }}
           />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} lg={6}>
+        <Grid2 xs={12} lg={6}>
           <AppNewInvoice
             title="Dernières factures"
             tableData={_appInvoices}
@@ -91,8 +91,8 @@ export function TourDetailsView({ tour }) {
               { id: '' },
             ]}
           />
-        </Grid>
-        <Grid xs={12} md={4} lg={6}>
+        </Grid2>
+        <Grid2 xs={12} md={4} lg={6}>
           <AppCurrentDownload
             title=" Facture Par Categorie"
             chart={{
@@ -103,8 +103,8 @@ export function TourDetailsView({ tour }) {
               ],
             }}
           />
-        </Grid>
-      </Grid>
+        </Grid2>
+      </Grid2>
     </DashboardContent>
   );
 }

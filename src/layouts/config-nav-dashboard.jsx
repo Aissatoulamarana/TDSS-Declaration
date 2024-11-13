@@ -65,7 +65,7 @@ export const navData = [
           },
           {
             title: 'Paiement',
-            path: paths.dashboard.general.analytics.paiement,
+            path: paths.dashboard.general.analytics.payment,
             icon: ICONS.invoice,
           },
         ],
@@ -89,7 +89,7 @@ export const navData = [
         icon: ICONS.banking,
         children: [
           { title: 'Factures', path: paths.dashboard.general.banking, icon: ICONS.banking },
-          { title: 'Booking', path: paths.dashboard.general.booking, icon: ICONS.booking },
+          // { title: 'Booking', path: paths.dashboard.general.booking, icon: ICONS.booking },
         ],
       },
       {
@@ -102,7 +102,7 @@ export const navData = [
             path: paths.dashboard.general.paiement.listes,
             icon: ICONS.banking,
           },
-          { title: 'Booking', path: paths.dashboard.general.booking, icon: ICONS.booking },
+         // { title: 'Booking', path: paths.dashboard.general.booking, icon: ICONS.booking },
         ],
       },
       { title: 'Penalité', path: paths.dashboard.general.course, icon: ICONS.course },

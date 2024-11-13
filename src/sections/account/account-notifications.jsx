@@ -69,17 +69,17 @@ export function AccountNotifications() {
     <Form methods={methods} onSubmit={onSubmit}>
       <Card sx={{ p: 3, gap: 3, display: 'flex', flexDirection: 'column' }}>
         {NOTIFICATIONS.map((notification) => (
-          <Grid key={notification.subheader} container spacing={3}>
-            <Grid xs={12} md={4}>
+          <Grid2 key={notification.subheader} container spacing={3}>
+            <Grid2 xs={12} md={4}>
               <ListItemText
                 primary={notification.subheader}
                 secondary={notification.caption}
                 primaryTypographyProps={{ typography: 'h6', mb: 0.5 }}
                 secondaryTypographyProps={{ component: 'span' }}
               />
-            </Grid>
+            </Grid2>
 
-            <Grid xs={12} md={8}>
+            <Grid2 xs={12} md={8}>
               <Stack spacing={1} sx={{ p: 3, borderRadius: 2, bgcolor: 'background.neutral' }}>
                 <Controller
                   name="selected"
@@ -104,8 +104,8 @@ export function AccountNotifications() {
                   )}
                 />
               </Stack>
-            </Grid>
-          </Grid>
+            </Grid2>
+          </Grid2>
         ))}
 
         <LoadingButton type="submit" variant="contained" loading={isSubmitting} sx={{ ml: 'auto' }}>

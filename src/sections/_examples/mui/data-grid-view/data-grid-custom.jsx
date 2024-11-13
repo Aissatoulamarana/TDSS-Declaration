@@ -163,19 +163,19 @@ const baseColumns = [
     filterable: false,
     disableColumnMenu: true,
     getActions: (params) => [
-      <GridActionsCellItem
+      <Grid2ActionsCellItem
         showInMenu
         icon={<Iconify icon="solar:eye-bold" />}
         label="View"
         onClick={() => console.info('VIEW', params.row.id)}
       />,
-      <GridActionsCellItem
+      <Grid2ActionsCellItem
         showInMenu
         icon={<Iconify icon="solar:pen-bold" />}
         label="Edit"
         onClick={() => console.info('EDIT', params.row.id)}
       />,
-      <GridActionsCellItem
+      <Grid2ActionsCellItem
         showInMenu
         icon={<Iconify icon="solar:trash-bin-trash-bold" />}
         label="Delete"
@@ -244,13 +244,13 @@ export function DataGridCustom({ data: rows }) {
 
 function CustomToolbar({ setFilterButtonEl }) {
   return (
-    <GridToolbarContainer>
-      <GridToolbarQuickFilter />
+    <Grid2ToolbarContainer>
+      <Grid2ToolbarQuickFilter />
       <Box sx={{ flexGrow: 1 }} />
-      <GridToolbarColumnsButton />
-      <GridToolbarFilterButton ref={setFilterButtonEl} />
-      <GridToolbarDensitySelector />
-      <GridToolbarExport />
+      <Grid2ToolbarColumnsButton />
+      <Grid2ToolbarFilterButton ref={setFilterButtonEl} />
+      <Grid2ToolbarDensitySelector />
+      <Grid2ToolbarExport />
     </GridToolbarContainer>
   );
 }

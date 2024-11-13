@@ -3,7 +3,7 @@ import { m } from 'framer-motion';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Container from '@mui/material/Container';
-import { Grid } from '@mui/material';
+import { Grid2 } from '@mui/material';
 
 import { CONFIG } from 'src/config-global';
 
@@ -83,15 +83,15 @@ export function HomeIntegrations({ sx, ...other }) {
         {renderLines}
 
         <Container>
-          <Grid disableEqualOverflow container spacing={{ xs: 5, md: 8 }}>
-            <Grid xs={12} md={6} lg={5}>
+          <Grid2 disableEqualOverflow container spacing={{ xs: 5, md: 8 }}>
+            <Grid2 xs={12} md={6} lg={5}>
               {renderDescription}
-            </Grid>
+            </Grid2>
 
-            <Grid xs={12} md={6} lg={7} sx={{ textAlign: { xs: 'center', md: 'right' } }}>
+            <Grid2 xs={12} md={6} lg={7} sx={{ textAlign: { xs: 'center', md: 'right' } }}>
               {renderImg}
-            </Grid>
-          </Grid>
+            </Grid2>
+          </Grid2>
         </Container>
       </MotionViewport>
     </Box>

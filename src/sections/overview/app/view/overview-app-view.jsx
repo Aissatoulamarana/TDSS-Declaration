@@ -1,18 +1,13 @@
 'use client';
 
-import { Grid } from '@mui/material';
-import Box from '@mui/material/Box';
+import { Grid2 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-
 
 import { DashboardContent } from 'src/layouts/dashboard';
 import { _appAuthors, _appRelated, _appInvoices, _appInstalled } from 'src/_mock';
 
-import { svgColorClasses } from 'src/components/svg-color';
-
 import { useMockedUser } from 'src/auth/hooks';
 
-import { AppWidget } from '../app-widget';
 import { AppNewInvoice } from '../app-new-invoice';
 import { AppTopAuthors } from '../app-top-authors';
 import { AppTopRelated } from '../app-top-related';
@@ -30,8 +25,8 @@ export function OverviewAppView() {
 
   return (
     <DashboardContent maxWidth="xl">
-      <Grid container spacing={3}>
-        {/*  <Grid xs={12} md={8}>
+      <Grid2 container spacing={3}>
+        {/*  <Grid2 xs={12} md={8}>
             <AppWelcome
             title={`Welcome back 👋 \n ${user?.displayName}`}
             description="If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything."
@@ -43,13 +38,13 @@ export function OverviewAppView() {
             }
           />
           
-        </Grid>
+        </Grid2>
          
-        <Grid xs={12} md={4}>
+        <Grid2 xs={12} md={4}>
           <AppFeatured list={_appFeatured} />
-        </Grid>
+        </Grid2>
  */}
-        <Grid xs={3} md={3} lg={3}>
+        <Grid2 size={{ xs: 6, md: 3 }}>
           <AppWidgetSummary
             title="Nombre Employés déclarés"
             percent={2.6}
@@ -59,9 +54,9 @@ export function OverviewAppView() {
               series: [15, 18, 12, 51, 68, 11, 39, 37],
             }}
           />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={3} md={3} lg={3}>
+        <Grid2 size={{ xs: 6, md: 3 }}>
           <AppWidgetSummary
             title="Total Paiement"
             percent={0.2}
@@ -72,8 +67,8 @@ export function OverviewAppView() {
               series: [20, 41, 63, 33, 28, 35, 50, 46],
             }}
           />
-        </Grid>
-        <Grid xs={3} md={3} lg={3}>
+        </Grid2>
+        <Grid2 size={{ xs: 6, md: 3 }}>
           <AppWidgetSummary
             title="Fatures en attente de paiement"
             percent={2.6}
@@ -83,9 +78,9 @@ export function OverviewAppView() {
               series: [15, 18, 12, 51, 68, 11, 39, 37],
             }}
           />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={3} md={3} lg={3}>
+        <Grid2 size={{ xs: 6, md: 3 }}>
           <AppWidgetSummary
             title="Total Factures"
             percent={-0.1}
@@ -96,9 +91,9 @@ export function OverviewAppView() {
               series: [18, 19, 31, 8, 16, 37, 12, 33],
             }}
           />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} md={6} lg={4}>
+        <Grid2 size={{ xs: 6, md: 6 }}>
           <AppCurrentDownload
             title="Catégorie de déclaration"
             subheader=""
@@ -110,9 +105,9 @@ export function OverviewAppView() {
               ],
             }}
           />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} md={6} lg={8}>
+        <Grid2 size={{ xs: 6, md: 6 }}>
           <AppAreaInstalled
             title="Déclarations"
             subheader="(+43%) Depuis l'année dernière"
@@ -159,9 +154,9 @@ export function OverviewAppView() {
               ],
             }}
           />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} lg={8}>
+        <Grid2 size={{ xs: 6, md: 8 }}>
           <AppNewInvoice
             title="Dernières Déclarations"
             tableData={_appInvoices}
@@ -173,42 +168,22 @@ export function OverviewAppView() {
               { id: '' },
             ]}
           />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} md={6} lg={4}>
+        <Grid2 size={{ xs: 6, md: 4 }}>
           <AppTopRelated title="Entreprises" list={_appRelated} />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} md={6} lg={4}>
+        <Grid2 size={{ xs: 6, md: 6 }}>
           <AppTopInstalledCountries title="Pays" list={_appInstalled} />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} md={6} lg={4}>
+        <Grid2 size={{ xs: 6, md: 6 }}>
           <AppTopAuthors title="Top Utilisateurs" list={_appAuthors} />
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} md={6} lg={4}>
-          <Box sx={{ gap: 3, display: 'flex', flexDirection: 'column' }}>
-            <AppWidget
-              title="Conversion"
-              total={38566}
-              icon="solar:user-rounded-bold"
-              chart={{ series: 48 }}
-            />
-
-            <AppWidget
-              title="Applications"
-              total={55566}
-              icon="fluent:mail-24-filled"
-              chart={{
-                series: 75,
-                colors: [theme.vars.palette.info.light, theme.vars.palette.info.main],
-              }}
-              sx={{ bgcolor: 'info.dark', [`& .${svgColorClasses.root}`]: { color: 'info.light' } }}
-            />
-          </Box>
-        </Grid>
-      </Grid>
+        
+      </Grid2>
     </DashboardContent>
   );
 }

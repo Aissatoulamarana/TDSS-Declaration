@@ -3,7 +3,7 @@ import { useState } from 'react';
 import List from '@mui/material/List';
 import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
-import { Grid } from '@mui/material';
+import { Grid2 } from '@mui/material';
 import Checkbox from '@mui/material/Checkbox';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
@@ -91,10 +91,10 @@ export function SimpleTransferList() {
   );
 
   return (
-    <Grid container justifyContent="center" alignItems="center" sx={{ width: 'auto', py: 3 }}>
-      <Grid>{customList(left)}</Grid>
+    <Grid2 container justifyContent="center" alignItems="center" sx={{ width: 'auto', py: 3 }}>
+      <Grid2>{customList(left)}</Grid>
 
-      <Grid container direction="column" alignItems="center" sx={{ p: 3 }}>
+      <Grid2 container direction="column" alignItems="center" sx={{ p: 3 }}>
         <Button
           color="inherit"
           variant="outlined"
@@ -139,9 +139,9 @@ export function SimpleTransferList() {
         >
           <Iconify icon="eva:arrowhead-left-fill" width={18} />
         </Button>
-      </Grid>
+      </Grid2>
 
-      <Grid>{customList(right)}</Grid>
-    </Grid>
+      <Grid2>{customList(right)}</Grid>
+    </Grid2>
   );
 }

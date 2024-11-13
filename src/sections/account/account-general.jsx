@@ -82,8 +82,8 @@ export function AccountGeneral() {
 
   return (
     <Form methods={methods} onSubmit={onSubmit}>
-      <Grid container spacing={3}>
-        <Grid xs={12} md={4}>
+      <Grid2 container spacing={3}>
+        <Grid2 xs={12} md={4}>
           <Card
             sx={{
               pt: 10,
@@ -123,9 +123,9 @@ export function AccountGeneral() {
               Delete user
             </Button>
           </Card>
-        </Grid>
+        </Grid2>
 
-        <Grid xs={12} md={8}>
+        <Grid2 xs={12} md={8}>
           <Card sx={{ p: 3 }}>
             <Box
               rowGap={3}
@@ -156,8 +156,8 @@ export function AccountGeneral() {
               </LoadingButton>
             </Stack>
           </Card>
-        </Grid>
-      </Grid>
+        </Grid2>
+      </Grid2>
     </Form>
   );
 }

@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 
-import { Grid } from '@mui/material';
+import { Grid2 } from '@mui/material';
 import Fab from '@mui/material/Fab';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
@@ -159,16 +159,16 @@ export function ProfileHome({ info, posts }) {
   );
 
   return (
-    <Grid container spacing={3}>
-      <Grid xs={12} md={4}>
+    <Grid2 container spacing={3}>
+      <Grid2 xs={12} md={4}>
         <Stack spacing={3}>
           {renderFollows}
           {renderAbout}
           {renderSocials}
         </Stack>
-      </Grid>
+      </Grid2>
 
-      <Grid xs={12} md={8}>
+      <Grid2 xs={12} md={8}>
         <Stack spacing={3}>
           {renderPostInput}
 
@@ -176,7 +176,7 @@ export function ProfileHome({ info, posts }) {
             <ProfilePostItem key={post.id} post={post} />
           ))}
         </Stack>
-      </Grid>
-    </Grid>
+      </Grid2>
+    </Grid2>
   );
 }
