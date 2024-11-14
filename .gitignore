@@ -1,21 +1,15 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
 node_modules
 .pnp
 .pnp.js
-node_modules/
 
 # testing
 coverage
 
 # production
-.next/
+.next
 .swc
 _static
 out
@@ -23,7 +17,7 @@ dist
 build
 
 # environment variables
-
+.env
 .env.local
 .env.development.local
 .env.test.local
@@ -33,8 +27,10 @@ build
 .DS_Store
 .vercel
 .netlify
-.vscode
-.history
-.eslintcache
 .unimportedrc.json
 tsconfig.tsbuildinfo
+.vscode
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

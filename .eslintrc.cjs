@@ -1,23 +1,21 @@
+/**
+ *  @type {import('eslint').ESLint.ConfigData}
+ */
 module.exports = {
   root: true,
   env: { browser: true, es2020: true },
-  plugins: ['perfectionist', 'unused-imports', 'prettier'],
-  extends: ['airbnb', 'airbnb/hooks', 'prettier'],
+  plugins: ['perfectionist', 'unused-imports', '@typescript-eslint', 'prettier'],
+  extends: ['airbnb', 'airbnb-typescript', 'airbnb/hooks', 'prettier'],
   parserOptions: {
-    ecmaVersion: 'latest',
     sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true,
-    },
+    ecmaVersion: 'latest',
+    ecmaFeatures: { jsx: true },
+    project: './tsconfig.json',
   },
   settings: {
-    react: {
-      version: 'detect',
-    },
     'import/resolver': {
-      alias: {
-        map: [['src', './src']],
-        extensions: ['.js', '.jsx', '.json'],
+      typescript: {
+        project: './tsconfig.json',
       },
     },
   },
@@ -27,9 +25,9 @@ module.exports = {
    * 2 ~ 'error'
    */
   rules: {
-    'no-use-before-define': 0,
+    // general
     'no-alert': 0,
-    'camelcase': 0,
+    camelcase: 0,
     'no-console': 0,
     'no-unused-vars': 0,
     'no-nested-ternary': 0,
@@ -39,8 +37,13 @@ module.exports = {
     'no-promise-executor-return': 0,
     'import/prefer-default-export': 0,
     'prefer-destructuring': [1, { object: true, array: false }],
+    // typescript
+    '@typescript-eslint/naming-convention': 0,
+    '@typescript-eslint/no-use-before-define': 0,
+    '@typescript-eslint/consistent-type-exports': 1,
+    '@typescript-eslint/consistent-type-imports': 1,
+    '@typescript-eslint/no-unused-vars': [1, { args: 'none' }],
     // react
-    'react/prop-types': 0,
     'react/no-children-prop': 0,
     'react/react-in-jsx-scope': 0,
     'react/no-array-index-key': 0,
