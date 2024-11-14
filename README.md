@@ -1,48 +1,37 @@
-## Minimal UI ([Free version](https://free.minimals.cc/))
+## 1.Prerequisites
 
-![license](https://img.shields.io/badge/license-MIT-blue.svg)
+- Node.js 20.x (Recommended)
 
-![preview](public/assets/images/minimal-free-preview.jpg)
+---
 
-> Free React Admin Dashboard made with Material-UI components and React + Vite.js.
+## 2.Installation
 
-## Pages
+#### Using Yarn (Recommended)
 
-- [Dashboard](https://free.minimals.cc/)
-- [Users](https://free.minimals.cc/user)
-- [Products](https://free.minimals.cc/products)
-- [Blog](https://free.minimals.cc/blog)
-- [Sign in](https://free.minimals.cc/sign-in)
-- [Not found](https://free.minimals.cc/404)
+```sh
+yarn install
+yarn dev
+```
 
-## Quick start
+#### Using Npm
 
-- Clone the repo: `git clone https://github.com/minimal-ui-kit/material-kit-react.git`
-- Recommended: `Node.js v20.x`
-- **Install:** `npm i` or `yarn install`
-- **Start:** `npm run dev` or `yarn dev`
-- **Build:** `npm run build` or `yarn build`
-- Open browser: `http://localhost:3039`
+```sh
+npm i
+npm run dev
+```
 
-## Upgrade to PRO Version
+---
 
-| Minimal Free                | [Minimal Pro](https://material-ui.com/store/items/minimal-dashboard/)                                   |
-| :-------------------------- | :------------------------------------------------------------------------------------------------------ |
-| **6** Pages                 | **70+** Pages                                                                                           |
-| **Partial** theme customize | **Fully** theme customize                                                                               |
-| -                           | **Next.js** version                                                                                     |
-| -                           | **TypeScript** version (Standard Plus and Extended license)                                             |
-| -                           | Design **Figma** file (Standard Plus and Extended license)                                              |
-| -                           | Authentication with **Amplify**, **Auth0**, **JWT**, **Firebase** and **Supabase**                      |
-| -                           | Light/dark mode, right-to-left, form validation... ([+more components](https://minimals.cc/components)) |
-| -                           | Complete users flows                                                                                    |
-| -                           | 1 year of free updates / 6 months of technical support                                                  |
-| -                           | Learn more: [Package & license](https://docs.minimals.cc/package)                                       |
+## 3.Mock Server
 
-## License
+By default we provide demo data from : `https://api-dev-minimal...`
 
-Distributed under the [MIT](https://github.com/minimal-ui-kit/minimal.free/blob/main/LICENSE.md) license.
+To set up your local server:
 
-## Contact us
+**Guide:** [https://docs.minimals.cc/mock-server](https://docs.minimals.cc/mock-server).
 
-Email: support@minimals.cc
+**Resource:** [Download](https://www.dropbox.com/sh/6ojn099upi105tf/AACpmlqrNUacwbBfVdtt2t6va?dl=0).
+
+---
+
+**NOTE:** When copying folders remember to also copy hidden files like .env. This is important because .env files often contain environment variables that are crucial for the application to run correctly.
