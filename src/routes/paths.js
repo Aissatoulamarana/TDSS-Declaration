@@ -45,6 +45,17 @@ export const paths = {
     root: ROOTS.DASHBOARD,
     two: `${ROOTS.DASHBOARD}/two`,
     three: `${ROOTS.DASHBOARD}/three`,
+    analytics: {
+      root: `${ROOTS.DASHBOARD}/analytics`,
+      declaration: `${ROOTS.DASHBOARD}/analytics/declaration`,
+      facture: `${ROOTS.DASHBOARD}/analytics/facture`,
+      paiement: `${ROOTS.DASHBOARD}/analytics/paiement`,
+    },
+    declaration: {
+      root: `${ROOTS.DASHBOARD}/declaration`,
+      list: `${ROOTS.DASHBOARD}/declaration/list`,
+    },
+
     group: {
       root: `${ROOTS.DASHBOARD}/group`,
       five: `${ROOTS.DASHBOARD}/group/five`,
