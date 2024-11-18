@@ -29,7 +29,7 @@ const init = CONFIG.isStaticExport
   ? { ...i18nOptions(lng), detection: { caches: ['localStorage'] } }
   : { ...i18nOptions(), detection: { caches: ['cookie'] } };
 
-i18next.use(resourcesToBackend((lang, ns) => import(`./langs/${lang}/${ns}.json`))).init(init);
+// i18next.use(resourcesToBackend((lang, ns) => import(`./langs/${lang}/${ns}.json`))).init(init);
 
 // ----------------------------------------------------------------------
 
