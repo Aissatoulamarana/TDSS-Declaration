@@ -169,14 +169,14 @@ export function DeclarationListView() {
 
   const handleEditRow = useCallback(
     (id) => {
-      router.push(paths.dashboard.invoice.edit(id));
+      router.push(paths.dashboard.declaration.root);
     },
     [router]
   );
 
   const handleViewRow = useCallback(
     (id) => {
-      router.push(paths.dashboard.invoice.details(id));
+      router.push(paths.dashboard.declaration.new);
     },
     [router]
   );

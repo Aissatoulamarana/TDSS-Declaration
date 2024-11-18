@@ -62,10 +62,7 @@ export const navData = [
         title: 'Déclarations',
         path: paths.dashboard.declaration.root,
         icon: ICONS.declaration,
-        children: [
-          { title: 'Nouvelle Declaration', path: paths.dashboard.declaration.new },
-          { title: 'Listes ', path: paths.dashboard.declaration.list },
-        ],
+        children: [{ title: 'Listes ', path: paths.dashboard.declaration.list }],
       },
       {
         title: 'Factures',
