@@ -4,7 +4,6 @@ import i18next from 'i18next';
 import { useMemo } from 'react';
 // import LanguageDetector from 'i18next-browser-languagedetector';
 import { I18nextProvider as Provider } from 'react-i18next';
-import resourcesToBackend from 'i18next-resources-to-backend';
 
 import { localStorageGetItem } from 'src/utils/storage-available';
 

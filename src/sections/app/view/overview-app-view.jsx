@@ -30,24 +30,6 @@ export function OverviewAppView() {
   return (
     <DashboardContent maxWidth="xl">
       <Grid container spacing={2}>
-        {/*  <Grid xs={12} md={8}>
-            <AppWelcome
-            title={`Welcome back 👋 \n ${user?.displayName}`}
-            description="If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything."
-            img={<SeoIllustration hideBackground />}
-            action={
-              <Button variant="contained" color="primary">
-                Go now
-              </Button>
-            }
-          />
-          
-        </Grid>
-         
-        <Grid xs={12} md={4}>
-          <AppFeatured list={_appFeatured} />
-        </Grid>
- */}
         <Grid size={{ xs: 6, md: 3 }}>
           <AppWidgetSummary
             title="Employés déclarés"

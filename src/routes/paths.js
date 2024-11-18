@@ -8,7 +8,6 @@ const ROOTS = {
 // ----------------------------------------------------------------------
 
 export const paths = {
-  faqs: '/faqs',
   minimalStore: 'https://mui.com/store/items/minimal-dashboard/',
   // AUTH
   auth: {
@@ -54,6 +53,7 @@ export const paths = {
     declaration: {
       root: `${ROOTS.DASHBOARD}/declaration`,
       list: `${ROOTS.DASHBOARD}/declaration/list`,
+      new: `${ROOTS.DASHBOARD}/declaration/new`,
     },
 
     group: {
