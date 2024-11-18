@@ -6,14 +6,14 @@ services:
         VUE_APP_DEV_URL: http://localhost:8000/
       context: .
       dockerfile: prod.Dockerfile
-    command: ["npm", "run", "start"]
+    # command: ["npm", "run", "start"]
     volumes:
       - ./:/app          # Syncs local code with the container
       - /app/node_modules      
     networks:
       - vue-network
     ports:
-      - "8080:3032"
+      - "8080:3033"
 
 networks:
   vue-network:
