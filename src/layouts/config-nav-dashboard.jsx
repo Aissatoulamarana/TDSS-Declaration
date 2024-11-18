@@ -55,6 +55,7 @@ export const navData = [
           { title: 'Declaration', path: paths.dashboard.analytics.declaration },
           { title: 'Facture', path: paths.dashboard.analytics.facture },
           { title: 'Paiement', path: paths.dashboard.analytics.paiement },
+          { title: 'Penalité', path: paths.dashboard.group.root },
         ],
       },
       {
@@ -79,7 +80,7 @@ export const navData = [
         children: [{ title: 'Listes Des Paiements', path: paths.dashboard.group.root }],
       },
 
-      { title: 'Penalité', path: paths.dashboard.three, icon: ICONS.penalite },
+      { title: 'Penalités', path: paths.dashboard.three, icon: ICONS.penalite },
     ],
   },
   /**
