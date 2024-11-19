@@ -47,8 +47,8 @@ import {
   TablePaginationCustom,
 } from 'src/components/table';
 
-import { InvoiceAnalytic } from '../declaration-analytic';
 import { InvoiceTableRow } from '../declaration-table-row';
+import { DeclarationSummary } from '../declaration-analytic';
 import { InvoiceTableToolbar } from '../declaration-table-toolbar';
 import { InvoiceTableFiltersResult } from '../declaration-table-filters';
 
@@ -219,7 +219,7 @@ export function DeclarationListView() {
               divider={<Divider orientation="vertical" flexItem sx={{ borderStyle: 'dashed' }} />}
               sx={{ py: 2 }}
             >
-              <InvoiceAnalytic
+              <DeclarationSummary
                 title="Total"
                 total={tableData.length}
                 percent={100}
@@ -228,7 +228,7 @@ export function DeclarationListView() {
                 color={theme.vars.palette.info.main}
               />
 
-              <InvoiceAnalytic
+              <DeclarationSummary
                 title="Payées"
                 total={getInvoiceLength('paid')}
                 percent={getPercentByStatus('paid')}
@@ -237,7 +237,7 @@ export function DeclarationListView() {
                 color={theme.vars.palette.success.main}
               />
 
-              <InvoiceAnalytic
+              <DeclarationSummary
                 title="En attente"
                 total={getInvoiceLength('pending')}
                 percent={getPercentByStatus('pending')}
@@ -246,7 +246,7 @@ export function DeclarationListView() {
                 color={theme.vars.palette.warning.main}
               />
 
-              <InvoiceAnalytic
+              <DeclarationSummary
                 title="Brouillon"
                 total={getInvoiceLength('draft')}
                 percent={getPercentByStatus('draft')}

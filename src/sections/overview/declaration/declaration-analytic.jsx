@@ -1,60 +1,76 @@
 import Box from '@mui/material/Box';
-import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
-import CircularProgress from '@mui/material/CircularProgress';
+import Card from '@mui/material/Card';
+import { useTheme } from '@mui/material/styles';
 
-import { fCurrency, fShortenNumber } from 'src/utils/format-number';
-
-import { varAlpha } from 'src/theme/styles';
+import { fNumber, fPercent } from 'src/utils/format-number';
 
 import { Iconify } from 'src/components/iconify';
+import { Chart, useChart } from 'src/components/chart';
 
 // ----------------------------------------------------------------------
 
-export function InvoiceAnalytic({ title, total, icon, color, percent, price }) {
+export function DeclarationSummary({ title, percent, total, chart, sx, ...other }) {
+  const theme = useTheme();
+
+  const chartColors = chart.colors ?? [theme.palette.primary.main];
+
+  const chartOptions = useChart({
+    chart: { sparkline: { enabled: true } },
+    colors: chartColors,
+    stroke: { width: 0 },
+    xaxis: { categories: chart.categories },
+    tooltip: {
+      y: { formatter: (value) => fNumber(value), title: { formatter: () => '' } },
+    },
+    plotOptions: { bar: { borderRadius: 1.5, columnWidth: '64%' } },
+    ...chart.options,
+  });
+
+  const renderTrending = (
+    <Box sx={{ gap: 0.5, display: 'flex', alignItems: 'center' }}>
+      <Iconify
+        width={24}
+        icon={
+          percent < 0
+            ? 'solar:double-alt-arrow-down-bold-duotone'
+            : 'solar:double-alt-arrow-up-bold-duotone'
+        }
+        sx={{ flexShrink: 0, color: 'success.main', ...(percent < 0 && { color: 'error.main' }) }}
+      />
+
+      <Box component="span" sx={{ typography: 'subtitle2' }}>
+        {percent > 0 && '+'}
+        {fPercent(percent)}
+      </Box>
+      <Box component="span" sx={{ typography: 'body2', color: 'text.secondary' }}>
+        last 7 days
+      </Box>
+    </Box>
+  );
+
   return (
-    <Stack
-      spacing={2.5}
-      direction="row"
-      alignItems="center"
-      justifyContent="center"
-      sx={{ width: 1, minWidth: 200 }}
+    <Card
+      sx={{
+        display: 'flex',
+        alignItems: 'center',
+        p: 3,
+        ...sx,
+      }}
+      {...other}
     >
-      <Stack alignItems="center" justifyContent="center" sx={{ position: 'relative' }}>
-        <Iconify icon={icon} width={32} sx={{ color, position: 'absolute' }} />
+      <Box sx={{ flexGrow: 1 }}>
+        <Box sx={{ typography: 'subtitle2' }}>{title}</Box>
+        <Box sx={{ mt: 1.5, mb: 1, typography: 'h3' }}>{fNumber(total)}</Box>
+        {renderTrending}
+      </Box>
 
-        <CircularProgress
-          size={56}
-          thickness={2}
-          value={percent}
-          variant="determinate"
-          sx={{ color, opacity: 0.48 }}
-        />
-
-        <CircularProgress
-          size={56}
-          value={100}
-          thickness={3}
-          variant="determinate"
-          sx={{
-            top: 0,
-            left: 0,
-            opacity: 0.48,
-            position: 'absolute',
-            color: (theme) => varAlpha(theme.vars.palette.grey['500Channel'], 0.16),
-          }}
-        />
-      </Stack>
-
-      <Stack spacing={0.5}>
-        <Typography variant="subtitle1">{title}</Typography>
-
-        <Box component="span" sx={{ color: 'text.disabled', typography: 'body2' }}>
-          {fShortenNumber(total)} Déclarations
-        </Box>
-
-        <Typography variant="subtitle2">{fCurrency(price)}</Typography>
-      </Stack>
-    </Stack>
+      <Chart
+        type="bar"
+        series={[{ data: chart.series }]}
+        options={chartOptions}
+        width={60}
+        height={40}
+      />
+    </Card>
   );
 }

@@ -56,25 +56,23 @@ export const navData = [
           { title: 'Facture', path: paths.dashboard.analytics.facture },
           { title: 'Paiement', path: paths.dashboard.analytics.paiement },
           { title: 'Penalité', path: paths.dashboard.group.root },
+          { title: 'Permis de travail', path: paths.dashboard.group.root },
         ],
       },
       {
         title: 'Déclarations',
-        path: paths.dashboard.declaration.root,
+        path: paths.dashboard.declaration.list,
         icon: ICONS.declaration,
-        children: [{ title: 'Listes ', path: paths.dashboard.declaration.list }],
       },
       {
         title: 'Factures',
         path: paths.dashboard.two,
         icon: ICONS.facture,
-        children: [{ title: 'Listes des factures', path: paths.dashboard.group.root }],
       },
       {
         title: 'Paiements',
         path: paths.dashboard.two,
         icon: ICONS.paiement,
-        children: [{ title: 'Listes Des Paiements', path: paths.dashboard.group.root }],
       },
 
       { title: 'Penalités', path: paths.dashboard.three, icon: ICONS.penalite },
@@ -105,11 +103,11 @@ export const navData = [
         ],
       },
       {
-        title: 'Entreprises',
+        title: 'Client',
         path: paths.dashboard.group.root,
         icon: ICONS.tour,
         children: [
-          { title: 'Listes Entreprises ', path: paths.dashboard.group.root },
+          { title: 'Listes  ', path: paths.dashboard.group.root },
           { title: 'Ajouter', path: paths.dashboard.group.five },
         ],
       },
