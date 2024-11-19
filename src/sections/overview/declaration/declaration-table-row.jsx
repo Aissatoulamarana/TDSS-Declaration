@@ -145,7 +145,7 @@ export function InvoiceTableRow({ row, selected, onSelectRow, onViewRow, onEditR
         open={confirm.value}
         onClose={confirm.onFalse}
         title="Supprimer"
-        content="Are you sure want to delete?"
+        content="Etes vous sûr de vouloir supprimer ?"
         action={
           <Button variant="contained" color="error" onClick={onDeleteRow}>
             Supprimer

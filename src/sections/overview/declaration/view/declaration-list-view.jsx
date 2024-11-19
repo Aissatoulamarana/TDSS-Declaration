@@ -6,10 +6,10 @@ import Box from '@mui/material/Box';
 import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 import Card from '@mui/material/Card';
+import { Grid2 } from '@mui/material';
 import Table from '@mui/material/Table';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
-import Divider from '@mui/material/Divider';
 import Tooltip from '@mui/material/Tooltip';
 import TableBody from '@mui/material/TableBody';
 import { useTheme } from '@mui/material/styles';
@@ -169,7 +169,7 @@ export function DeclarationListView() {
 
   const handleEditRow = useCallback(
     (id) => {
-      router.push(paths.dashboard.declaration.root);
+      router.push(paths.dashboard.declaration.edit(id));
     },
     [router]
   );
@@ -191,7 +191,7 @@ export function DeclarationListView() {
 
   return (
     <>
-      <DashboardContent>
+      <DashboardContent maxWidth="xl">
         <CustomBreadcrumbs
           heading="Listes des Déclarations"
           links={[
@@ -212,51 +212,57 @@ export function DeclarationListView() {
           sx={{ mb: { xs: 3, md: 5 } }}
         />
 
-        <Card sx={{ mb: { xs: 3, md: 5 } }} lg={12}>
-          <Scrollbar sx={{ minHeight: 108 }}>
-            <Stack
-              direction="row"
-              divider={<Divider orientation="vertical" flexItem sx={{ borderStyle: 'dashed' }} />}
-              sx={{ py: 2 }}
-            >
-              <DeclarationSummary
-                title="Total"
-                total={tableData.length}
-                percent={100}
-                price={sumBy(tableData, (invoice) => invoice.totalAmount)}
-                icon="solar:bill-list-bold-duotone"
-                color={theme.vars.palette.info.main}
-              />
+        <Grid2 container spacing={3} sx={{ mb: { xs: 3, md: 5 } }} lg={12}>
+          <Grid2 size={{ xs: 6, md: 3 }}>
+            <DeclarationSummary
+              title="Total"
+              total={tableData.length}
+              percent={100}
+              chart={{
+                colors: [theme.vars.palette.info.main],
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
+                series: [20, 41, 63, 33, 28, 35, 50, 46],
+              }}
+            />
+          </Grid2>
+          <Grid2 size={{ xs: 6, md: 3 }}>
+            <DeclarationSummary
+              title="Payées"
+              total={getInvoiceLength('paid')}
+              percent={getPercentByStatus('paid')}
+              chart={{
+                // colors: [theme.vars.palette.success.main],
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
+                series: [15, 18, 12, 51, 68, 11, 39, 37],
+              }}
+            />
+          </Grid2>
 
-              <DeclarationSummary
-                title="Payées"
-                total={getInvoiceLength('paid')}
-                percent={getPercentByStatus('paid')}
-                price={getTotalAmount('paid')}
-                icon="solar:file-check-bold-duotone"
-                color={theme.vars.palette.success.main}
-              />
-
-              <DeclarationSummary
-                title="En attente"
-                total={getInvoiceLength('pending')}
-                percent={getPercentByStatus('pending')}
-                price={getTotalAmount('pending')}
-                icon="solar:sort-by-time-bold-duotone"
-                color={theme.vars.palette.warning.main}
-              />
-
-              <DeclarationSummary
-                title="Brouillon"
-                total={getInvoiceLength('draft')}
-                percent={getPercentByStatus('draft')}
-                price={getTotalAmount('draft')}
-                icon="solar:file-corrupted-bold-duotone"
-                color={theme.vars.palette.text.secondary}
-              />
-            </Stack>
-          </Scrollbar>
-        </Card>
+          <Grid2 size={{ xs: 6, md: 3 }}>
+            <DeclarationSummary
+              title="En attente"
+              total={getInvoiceLength('pending')}
+              percent={getPercentByStatus('pending')}
+              chart={{
+                colors: [theme.vars.palette.warning.main],
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
+                series: [18, 19, 31, 8, 16, 37, 12, 33],
+              }}
+            />
+          </Grid2>
+          <Grid2 size={{ xs: 6, md: 3 }}>
+            <DeclarationSummary
+              title="Brouillon"
+              total={getInvoiceLength('draft')}
+              percent={getPercentByStatus('draft')}
+              chart={{
+                colors: [theme.vars.palette.error.main],
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
+                series: [18, 19, 31, 8, 16, 37, 12, 33],
+              }}
+            />
+          </Grid2>
+        </Grid2>
 
         <Card>
           <Tabs

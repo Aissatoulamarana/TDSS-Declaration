@@ -9,16 +9,19 @@ import { Chart, useChart } from 'src/components/chart';
 
 // ----------------------------------------------------------------------
 
-export function DeclarationSummary({ title, percent, total, chart, sx, ...other }) {
+export function DeclarationSummary({ title, percent, total, chart = {}, sx, ...other }) {
   const theme = useTheme();
 
+  // Utilisation de valeurs par défaut si les propriétés `chart` sont undefined
   const chartColors = chart.colors ?? [theme.palette.primary.main];
+  const chartSeries = chart.series ?? [];
+  const chartCategories = chart.categories ?? [];
 
   const chartOptions = useChart({
     chart: { sparkline: { enabled: true } },
     colors: chartColors,
     stroke: { width: 0 },
-    xaxis: { categories: chart.categories },
+    xaxis: { categories: chartCategories },
     tooltip: {
       y: { formatter: (value) => fNumber(value), title: { formatter: () => '' } },
     },
@@ -37,7 +40,6 @@ export function DeclarationSummary({ title, percent, total, chart, sx, ...other 
         }
         sx={{ flexShrink: 0, color: 'success.main', ...(percent < 0 && { color: 'error.main' }) }}
       />
-
       <Box component="span" sx={{ typography: 'subtitle2' }}>
         {percent > 0 && '+'}
         {fPercent(percent)}
@@ -66,7 +68,7 @@ export function DeclarationSummary({ title, percent, total, chart, sx, ...other 
 
       <Chart
         type="bar"
-        series={[{ data: chart.series }]}
+        series={[{ data: chartSeries }]}
         options={chartOptions}
         width={60}
         height={40}

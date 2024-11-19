@@ -55,6 +55,7 @@ export const paths = {
       root: `${ROOTS.DASHBOARD}/declaration`,
       list: `${ROOTS.DASHBOARD}/declaration/list`,
       new: `${ROOTS.DASHBOARD}/declaration/new`,
+      edit: (id) => `${ROOTS.DASHBOARD}/declaration/${id}/edit`,
     },
 
     group: {
