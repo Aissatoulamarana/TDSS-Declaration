@@ -58,6 +58,20 @@ export const paths = {
       edit: (id) => `${ROOTS.DASHBOARD}/declaration/${id}/edit`,
     },
 
+    factures: {
+      root: `${ROOTS.DASHBOARD}/factures`,
+      list: `${ROOTS.DASHBOARD}/factures/list`,
+    },
+
+    paiements: {
+      root: `${ROOTS.DASHBOARD}/paiements`,
+      list: `${ROOTS.DASHBOARD}/paiements/list`,
+    },
+    penalite: {
+      root: `${ROOTS.DASHBOARD}/penalite`,
+      list: `${ROOTS.DASHBOARD}/penalite/list`,
+    },
+
     group: {
       root: `${ROOTS.DASHBOARD}/group`,
       five: `${ROOTS.DASHBOARD}/group/five`,

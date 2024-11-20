@@ -2,7 +2,6 @@ import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
-import Divider from '@mui/material/Divider';
 import MenuList from '@mui/material/MenuList';
 import MenuItem from '@mui/material/MenuItem';
 import TableRow from '@mui/material/TableRow';
@@ -24,7 +23,7 @@ import { usePopover, CustomPopover } from 'src/components/custom-popover';
 
 // ----------------------------------------------------------------------
 
-export function InvoiceTableRow({ row, selected, onSelectRow, onViewRow, onEditRow, onDeleteRow }) {
+export function FactureTableRow({ row, selected, onSelectRow, onViewRow, onEditRow, onDeleteRow }) {
   const confirm = useBoolean();
 
   const popover = usePopover();
@@ -42,28 +41,20 @@ export function InvoiceTableRow({ row, selected, onSelectRow, onViewRow, onEditR
 
         <TableCell>
           <Stack spacing={2} direction="row" alignItems="center">
-            <Avatar alt={row.invoiceTo.name}>{row.invoiceTo.name.charAt(0).toUpperCase()}</Avatar>
-
             <ListItemText
               disableTypography
               primary={
                 <Typography variant="body2" noWrap>
-                  {row.invoiceTo.name}
-                </Typography>
-              }
-              secondary={
-                <Link
-                  noWrap
-                  variant="body2"
-                  onClick={onViewRow}
-                  sx={{ color: 'text.disabled', cursor: 'pointer' }}
-                >
                   {row.invoiceNumber}
-                </Link>
+                </Typography>
               }
             />
           </Stack>
         </TableCell>
+
+        <TableCell>{row.invoiceNumber}</TableCell>
+        <TableCell>{row.invoiceTo.name}</TableCell>
+        <TableCell>{fCurrency(row.totalAmount)}</TableCell>
 
         <TableCell>
           <ListItemText
@@ -73,9 +64,6 @@ export function InvoiceTableRow({ row, selected, onSelectRow, onViewRow, onEditR
             secondaryTypographyProps={{ mt: 0.5, component: 'span', typography: 'caption' }}
           />
         </TableCell>
-
-        <TableCell>{row.invoiceTo.name}</TableCell>
-        <TableCell>{fCurrency(row.totalAmount)}</TableCell>
 
         <TableCell>
           <Label
@@ -124,18 +112,14 @@ export function InvoiceTableRow({ row, selected, onSelectRow, onViewRow, onEditR
             <Iconify icon="solar:pen-bold" />
             Modifier
           </MenuItem>
-
-          <Divider sx={{ borderStyle: 'dashed' }} />
-
           <MenuItem
             onClick={() => {
-              confirm.onTrue();
+              onEditRow();
               popover.onClose();
             }}
-            sx={{ color: 'error.main' }}
           >
-            <Iconify icon="solar:trash-bin-trash-bold" />
-            Supprimer
+            <Iconify icon="mdi:credit-card" />
+            Payer
           </MenuItem>
         </MenuList>
       </CustomPopover>
@@ -143,11 +127,11 @@ export function InvoiceTableRow({ row, selected, onSelectRow, onViewRow, onEditR
       <ConfirmDialog
         open={confirm.value}
         onClose={confirm.onFalse}
-        title="Supprimer"
-        content="Etes vous sûr de vouloir supprimer ?"
+        title="Payer"
+        content="Are you sure want to delete?"
         action={
           <Button variant="contained" color="error" onClick={onDeleteRow}>
-            Supprimer
+            Payer
           </Button>
         }
       />

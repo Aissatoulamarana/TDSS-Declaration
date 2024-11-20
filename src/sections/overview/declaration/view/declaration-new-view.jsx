@@ -6,13 +6,14 @@ import { DashboardContent } from 'src/layouts/dashboard';
 
 import { CustomBreadcrumbs } from 'src/components/custom-breadcrumbs';
 
-import { InvoiceNewEditForm } from '../declaration-new';
+import { DeclarationNew } from '../declaration-new';
+import { ImportFilesButton } from '../components/button-import-excel';
 
 // ----------------------------------------------------------------------
 
 export function DeclarationNewView() {
   return (
-    <DashboardContent>
+    <DashboardContent maxWidth="xl">
       <CustomBreadcrumbs
         heading="Nouvelle Déclarations"
         links={[
@@ -20,10 +21,13 @@ export function DeclarationNewView() {
           { name: 'Déclarations', href: paths.dashboard.declaration.root },
           { name: 'Nouvelle Déclaration' },
         ]}
-        sx={{ mb: { xs: 3, md: 5 } }}
+        sx={{ mb: { xs: 3, md: 2 } }} // Marges pour les breadcrumbs
       />
-
-      <InvoiceNewEditForm />
+      <div style={{ marginBottom: '20px' }}>
+        <ImportFilesButton />
+      </div>
+      {/* Ajout d'espace sous ImportFilesButton */}
+      <DeclarationNew />
     </DashboardContent>
   );
 }

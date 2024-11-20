@@ -16,8 +16,8 @@ import { today, fIsAfter } from 'src/utils/format-time';
 
 import { Form } from 'src/components/hook-form';
 
-import { InvoiceNewEditStatusDate } from './declaration-status';
-import { InvoiceNewEditDetails } from './declaration-edit-detail';
+import { DeclarationNewEditStatusDate, InvoiceNewEditStatusDate } from './declaration-status';
+import { DeclarationNewEditDetails, InvoiceNewEditDetails } from './declaration-edit-detail';
 
 // ----------------------------------------------------------------------
 
@@ -50,7 +50,7 @@ export const NewInvoiceSchema = zod
 
 // ----------------------------------------------------------------------
 
-export function InvoiceNewEditForm({ currentInvoice }) {
+export function DeclarationNew({ currentInvoice }) {
   const router = useRouter();
 
   const loadingSave = useBoolean();
@@ -122,9 +122,9 @@ export function InvoiceNewEditForm({ currentInvoice }) {
   return (
     <Form methods={methods}>
       <Card>
-        <InvoiceNewEditStatusDate />
+        <DeclarationNewEditStatusDate />
 
-        <InvoiceNewEditDetails />
+        <DeclarationNewEditDetails />
       </Card>
 
       <Stack justifyContent="flex-end" direction="row" spacing={2} sx={{ mt: 3 }}>

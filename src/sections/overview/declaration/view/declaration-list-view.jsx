@@ -57,9 +57,10 @@ import { InvoiceTableFiltersResult } from '../declaration-table-filters';
 const TABLE_HEAD = [
   { id: 'invoiceNumber', label: 'Déclaration' },
   { id: 'createDate', label: 'Date de Création' },
-  { id: 'facture', label: 'Facture' },
-  { id: 'status', label: 'Status' },
+  { id: 'facture', label: 'Type de declaration' },
   { id: 'price', label: 'Facture' },
+  { id: 'status', label: 'Status' },
+
   { id: '' },
 ];
 

@@ -9,11 +9,12 @@ import Card from '@mui/material/Card';
 import Table from '@mui/material/Table';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
+import { Typography } from '@mui/material';
 import Tooltip from '@mui/material/Tooltip';
 import TableBody from '@mui/material/TableBody';
 import { useTheme } from '@mui/material/styles';
-import { Grid2 } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
+import { Grid2 } from '@mui/material';
 
 import { paths } from 'src/routes/paths';
 import { useRouter } from 'src/routes/hooks';
@@ -46,27 +47,28 @@ import {
   TablePaginationCustom,
 } from 'src/components/table';
 
-import { FactureAnalytic } from '../factures-analytics';
-import { FactureTableRow } from '../factures-table-row';
-import { FactureTableToolbar } from '../factures-table-toolbar';
-import { FactureTableFilters } from '../factures-table-filters';
+import { PenaliteAnalytic } from '../penalite-analytic';
+import { PenaliteTableRow } from '../penalite-table-row';
+import { PenaliteTableToolbar } from '../penalite-table-toolbar';
+import { PenaliteTableFiltersResult } from '../penalite-table-filters-result';
 
 // ----------------------------------------------------------------------
 
 const TABLE_HEAD = [
-  { id: 'invoiceNumber', label: 'Numero Facture' },
-  { id: 'numero', label: 'Numero Déclaration' },
-  { id: 'type', label: 'Type Déclaration' },
+  { id: 'invoiceNumber', label: 'Numero ' },
+
+  { id: 'type', label: 'Type' },
   { id: 'price', label: 'Montant' },
-  { id: 'createDate', label: 'Date ' },
+  { id: 'numero', label: 'Déclaration' },
   { id: 'status', label: 'Status' },
+  { id: 'createDate', label: 'Date ' },
 
   { id: '' },
 ];
 
 // ----------------------------------------------------------------------
 
-export function FactureListView() {
+export function PenaliteListView() {
   const theme = useTheme();
 
   const router = useRouter();
@@ -187,19 +189,19 @@ export function FactureListView() {
     <>
       <DashboardContent maxWidth="xl">
         <CustomBreadcrumbs
-          heading="Listes des Factures"
+          heading="Listes des Penalités"
           links={[
             { name: 'Dashboard', href: paths.dashboard.root },
-            { name: 'Factures', href: paths.dashboard.factures.root },
-            { name: 'Listes des factures' },
+            { name: 'Penalité', href: paths.dashboard.penalite.root },
+            { name: 'Listes' },
           ]}
           sx={{ mb: { xs: 3, md: 5 } }}
         />
 
         <Stack spacing={4}>
           <Grid2 container spacing={3} sx={{ mb: { xs: 3, md: 5 } }} lg={12}>
-            <Grid2 size={{ xs: 6, md: 4 }}>
-              <FactureAnalytic
+            <Grid2 size={{ xs: 6, md: 3 }}>
+              <PenaliteAnalytic
                 title="Total"
                 total={tableData.length}
                 percent={100}
@@ -210,8 +212,8 @@ export function FactureListView() {
                 }}
               />
             </Grid2>
-            <Grid2 size={{ xs: 6, md: 4 }}>
-              <FactureAnalytic
+            <Grid2 size={{ xs: 6, md: 3 }}>
+              <PenaliteAnalytic
                 title="Payées"
                 percent={2.6}
                 total={18765}
@@ -221,8 +223,20 @@ export function FactureListView() {
                 }}
               />
             </Grid2>
-            <Grid2 size={{ xs: 6, md: 4 }}>
-              <FactureAnalytic
+            <Grid2 size={{ xs: 6, md: 3 }}>
+              <PenaliteAnalytic
+                title="En attente"
+                percent={2.6}
+                total={18765}
+                chart={{
+                  colors: [theme.vars.palette.error.main],
+                  categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
+                  series: [18, 19, 31, 8, 16, 37, 12, 33],
+                }}
+              />
+            </Grid2>
+            <Grid2 size={{ xs: 6, md: 3 }}>
+              <PenaliteAnalytic
                 title="En attente"
                 percent={2.6}
                 total={18765}
@@ -266,7 +280,7 @@ export function FactureListView() {
             ))}
           </Tabs>
 
-          <FactureTableToolbar
+          <PenaliteTableToolbar
             filters={filters}
             dateError={dateError}
             onResetPage={table.onResetPage}
@@ -274,7 +288,7 @@ export function FactureListView() {
           />
 
           {canReset && (
-            <FactureTableFilters
+            <PenaliteTableFiltersResult
               filters={filters}
               onResetPage={table.onResetPage}
               totalResults={dataFiltered.length}
@@ -346,7 +360,7 @@ export function FactureListView() {
                       table.page * table.rowsPerPage + table.rowsPerPage
                     )
                     .map((row) => (
-                      <FactureTableRow
+                      <PenaliteTableRow
                         key={row.id}
                         row={row}
                         selected={table.selected.includes(row.id)}

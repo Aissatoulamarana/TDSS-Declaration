@@ -66,16 +66,16 @@ export const navData = [
       },
       {
         title: 'Factures',
-        path: paths.dashboard.two,
+        path: paths.dashboard.factures.list,
         icon: ICONS.facture,
       },
       {
         title: 'Paiements',
-        path: paths.dashboard.two,
+        path: paths.dashboard.paiements.list,
         icon: ICONS.paiement,
       },
 
-      { title: 'Penalités', path: paths.dashboard.three, icon: ICONS.penalite },
+      { title: 'Penalités', path: paths.dashboard.penalite.list, icon: ICONS.penalite },
     ],
   },
   /**

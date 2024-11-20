@@ -12,8 +12,8 @@ import FormControl from '@mui/material/FormControl';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import InputAdornment from '@mui/material/InputAdornment';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { formHelperTextClasses } from '@mui/material/FormHelperText';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 
 import { Iconify } from 'src/components/iconify';
@@ -21,7 +21,7 @@ import { usePopover, CustomPopover } from 'src/components/custom-popover';
 
 // ----------------------------------------------------------------------
 
-export function InvoiceTableToolbar({ filters, options, dateError, onResetPage }) {
+export function PenaliteTableToolbar({ filters, options, dateError, onResetPage }) {
   const popover = usePopover();
 
   const handleFilterName = useCallback(
@@ -68,24 +68,20 @@ export function InvoiceTableToolbar({ filters, options, dateError, onResetPage }
         sx={{ p: 2.5, pr: { xs: 2.5, md: 1 } }}
       >
         <FormControl sx={{ flexShrink: 0, width: { xs: 1, md: 180 } }}>
-          <InputLabel htmlFor="invoice-filter-service-select-label">Fonction</InputLabel>
+          <InputLabel htmlFor="invoice-filter-service-select-label">Type</InputLabel>
 
           <Select
             multiple
-            value={filters.state.service}
+            value={filters.state.service} // Ajout de la prop `value`
             onChange={handleFilterService}
             input={<OutlinedInput label="service" />}
-            renderValue={(selected) => selected.map((value) => value).join(', ')}
+            renderValue={(selected) => selected.join(', ')}
             inputProps={{ id: 'invoice-filter-service-select-label' }}
             sx={{ textTransform: 'capitalize' }}
           >
-            {options.services.map((option) => (
+            {options?.services?.map((option) => (
               <MenuItem key={option} value={option}>
-                <Checkbox
-                  disableRipple
-                  size="small"
-                  checked={filters.state.service.includes(option)}
-                />
+                <Checkbox checked={filters.state.service.includes(option)} disableRipple />
                 {option}
               </MenuItem>
             ))}
@@ -123,11 +119,9 @@ export function InvoiceTableToolbar({ filters, options, dateError, onResetPage }
             }}
           />
         </LocalizationProvider>
-
         <Stack direction="row" alignItems="center" spacing={2} flexGrow={1} sx={{ width: 1 }}>
           <TextField
             fullWidth
-            value={filters.state.name}
             onChange={handleFilterName}
             placeholder="rechercher par nom ou par numéro"
             InputProps={{

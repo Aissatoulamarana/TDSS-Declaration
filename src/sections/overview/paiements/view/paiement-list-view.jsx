@@ -46,27 +46,28 @@ import {
   TablePaginationCustom,
 } from 'src/components/table';
 
-import { FactureAnalytic } from '../factures-analytics';
-import { FactureTableRow } from '../factures-table-row';
-import { FactureTableToolbar } from '../factures-table-toolbar';
-import { FactureTableFilters } from '../factures-table-filters';
+import { PaiementAnalytic } from '../paiement-analytic';
+import { PaiementTableRow } from '../paiement-table-row';
+import { PaiementTableToolbar } from '../paiement-table-toolbar';
+import { PaiementTableFiltersResult } from '../paiement-table-filters';
 
 // ----------------------------------------------------------------------
 
 const TABLE_HEAD = [
   { id: 'invoiceNumber', label: 'Numero Facture' },
+
   { id: 'numero', label: 'Numero Déclaration' },
-  { id: 'type', label: 'Type Déclaration' },
   { id: 'price', label: 'Montant' },
+  { id: 'type', label: 'Type Déclaration' },
+  { id: 'status', label: 'Banque' },
   { id: 'createDate', label: 'Date ' },
-  { id: 'status', label: 'Status' },
 
   { id: '' },
 ];
 
 // ----------------------------------------------------------------------
 
-export function FactureListView() {
+export function PaiementListView() {
   const theme = useTheme();
 
   const router = useRouter();
@@ -187,11 +188,11 @@ export function FactureListView() {
     <>
       <DashboardContent maxWidth="xl">
         <CustomBreadcrumbs
-          heading="Listes des Factures"
+          heading="Listes des Paiements"
           links={[
             { name: 'Dashboard', href: paths.dashboard.root },
-            { name: 'Factures', href: paths.dashboard.factures.root },
-            { name: 'Listes des factures' },
+            { name: 'Paiements', href: paths.dashboard.paiements.root },
+            { name: 'Listes' },
           ]}
           sx={{ mb: { xs: 3, md: 5 } }}
         />
@@ -199,7 +200,7 @@ export function FactureListView() {
         <Stack spacing={4}>
           <Grid2 container spacing={3} sx={{ mb: { xs: 3, md: 5 } }} lg={12}>
             <Grid2 size={{ xs: 6, md: 4 }}>
-              <FactureAnalytic
+              <PaiementAnalytic
                 title="Total"
                 total={tableData.length}
                 percent={100}
@@ -211,7 +212,7 @@ export function FactureListView() {
               />
             </Grid2>
             <Grid2 size={{ xs: 6, md: 4 }}>
-              <FactureAnalytic
+              <PaiementAnalytic
                 title="Payées"
                 percent={2.6}
                 total={18765}
@@ -222,7 +223,7 @@ export function FactureListView() {
               />
             </Grid2>
             <Grid2 size={{ xs: 6, md: 4 }}>
-              <FactureAnalytic
+              <PaiementAnalytic
                 title="En attente"
                 percent={2.6}
                 total={18765}
@@ -266,7 +267,7 @@ export function FactureListView() {
             ))}
           </Tabs>
 
-          <FactureTableToolbar
+          <PaiementTableToolbar
             filters={filters}
             dateError={dateError}
             onResetPage={table.onResetPage}
@@ -274,7 +275,7 @@ export function FactureListView() {
           />
 
           {canReset && (
-            <FactureTableFilters
+            <PaiementTableFiltersResult
               filters={filters}
               onResetPage={table.onResetPage}
               totalResults={dataFiltered.length}
@@ -346,7 +347,7 @@ export function FactureListView() {
                       table.page * table.rowsPerPage + table.rowsPerPage
                     )
                     .map((row) => (
-                      <FactureTableRow
+                      <PaiementTableRow
                         key={row.id}
                         row={row}
                         selected={table.selected.includes(row.id)}

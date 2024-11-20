@@ -128,9 +128,9 @@ export function OverviewAnalyticsView() {
             tableData={_appInvoices}
             headLabel={[
               { id: 'id', label: 'Entreprise ' },
-              { id: 'category', label: 'Permis A' },
-              { id: 'category', label: 'Permis B' },
-              { id: 'category', label: 'Permis C' },
+              { id: 'Permis A', label: 'Permis A' },
+              { id: 'Permis B', label: 'Permis B' },
+              { id: 'Permis C', label: 'Permis C' },
               { id: 'category', label: 'Total Employés' },
               { id: '' },
             ]}
@@ -142,9 +142,9 @@ export function OverviewAnalyticsView() {
             tableData={_appInvoices}
             headLabel={[
               { id: 'id', label: 'Nationalité ' },
-              { id: 'category', label: 'Permis A' },
-              { id: 'category', label: 'Permis B' },
-              { id: 'category', label: 'Permis C' },
+              { id: 'Permis A', label: 'Permis A' },
+              { id: 'Permis B', label: 'Permis B' },
+              { id: 'Permis C', label: 'Permis C' },
               { id: 'category', label: 'Total Employés' },
               { id: '' },
             ]}

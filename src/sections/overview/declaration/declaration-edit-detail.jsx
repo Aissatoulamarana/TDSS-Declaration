@@ -13,13 +13,19 @@ import { INVOICE_SERVICE_OPTIONS } from 'src/_mock';
 
 import { Field } from 'src/components/hook-form';
 import { Iconify } from 'src/components/iconify';
+import { checkPassportExistence } from 'src/services/declaration/api/check-passport';
 
-export function InvoiceNewEditDetails() {
+export function DeclarationNewEditDetails() {
   const { control, setValue, watch } = useFormContext();
   const { fields, append, remove } = useFieldArray({ control, name: 'items' });
-  const values = watch();
+
   const [openModal, setOpenModal] = useState(false);
   const [activeStep, setActiveStep] = useState(0);
+
+  const values = watch(); // Récupère les valeurs du formulaire en temps réel
+  const [passportExists, setPassportExists] = useState(false); // État pour savoir si le passeport existe
+  const [passportError, setPassportError] = useState(''); // État pour afficher l'erreur
+  const [type, setType] = useState('nouvelle'); // Par défaut, type = nouvelle
 
   const totalOnRow = values.items.map((item) => item.quantity * item.price);
   const subtotal = totalOnRow.reduce((acc, num) => acc + num, 0);
@@ -38,6 +44,7 @@ export function InvoiceNewEditDetails() {
     append({
       fonction: '',
       nom: '',
+      numeroPasseport: '',
       nationalité: '',
     });
   };
@@ -118,6 +125,32 @@ export function InvoiceNewEditDetails() {
     handleCloseModal();
   };
 
+  // Vérifie l'existence du passeport chaque fois que l'utilisateur modifie le champ
+  const handlePassportChange = async (event) => {
+    const passportNumber = event.target.value;
+
+    // Appel à la fonction d'API pour vérifier si le passeport existe
+    try {
+      const exists = await checkPassportExistence(passportNumber);
+      if (exists) {
+        setPassportExists(true);
+        setPassportError('Ce numéro de passeport existe déjà.');
+        setType('renouvellement'); // Si le passeport existe, le type devient 'renouvellement'
+      } else {
+        setPassportExists(false);
+        setPassportError('');
+        setType('nouvelle'); // Si le passeport n'existe pas, le type devient 'nouvelle'
+      }
+    } catch (error) {
+      setPassportError('Erreur lors de la vérification du passeport.');
+    }
+  };
+
+  // Mettez à jour la valeur du champ 'type' dans votre formulaire
+  useEffect(() => {
+    setValue('type', type); // Cette ligne met à jour le champ 'type' avec la valeur correcte
+  }, [type, setValue]);
+
   return (
     <Box sx={{ p: 3 }}>
       <Typography variant="h6" sx={{ color: 'text.disabled', mb: 3 }}>
@@ -128,6 +161,41 @@ export function InvoiceNewEditDetails() {
         {fields.map((item, index) => (
           <Stack key={item.id} alignItems="flex-end" spacing={1.5}>
             <Stack direction={{ xs: 'column', md: 'row' }} spacing={2} sx={{ width: '100%' }}>
+              <Field.Text
+                size="small"
+                name="numeroPasseport"
+                label="Numéro Passeport"
+                InputLabelProps={{ shrink: true }}
+                sx={{ width: '100%' }}
+                onChange={handlePassportChange} // Appel de la fonction de vérification dès que l'utilisateur tape
+              />
+              {/* Afficher un message d'erreur si le passeport existe déjà */}
+              {passportExists && (
+                <Typography variant="caption" color="error" sx={{ mt: 1 }}>
+                  {passportError}
+                </Typography>
+              )}
+
+              <Field.Select
+                name="type"
+                size="small"
+                label="Type"
+                InputLabelProps={{ shrink: true }}
+                sx={{ width: '100%' }}
+                value={type} // Le champ "type" est contrôlé par la valeur de `type`
+                disabled={passportExists ? false : true} // Si le passeport existe, l'utilisateur peut choisir, sinon il est bloqué
+              >
+                <MenuItem value="nouvelle" disabled={!passportExists}>
+                  Nouvelle
+                </MenuItem>
+                <MenuItem value="renouvellement" disabled={passportExists}>
+                  Renouvellement
+                </MenuItem>
+                <MenuItem value="duplicata" disabled={passportExists}>
+                  Duplicata
+                </MenuItem>
+              </Field.Select>
+
               <Field.Text
                 size="small"
                 name={`items[${index}].nom`}

@@ -9,7 +9,7 @@ import { Chart, useChart } from 'src/components/chart';
 
 // ----------------------------------------------------------------------
 
-export function FactureAnalytic({ title, percent, total, chart = {}, sx, ...other }) {
+export function PaiementAnalytic({ title, percent, total, chart = {}, sx, ...other }) {
   const theme = useTheme();
 
   // Utilisation de valeurs par défaut si les propriétés `chart` sont undefined

@@ -6,24 +6,24 @@ import { DashboardContent } from 'src/layouts/dashboard';
 
 import { CustomBreadcrumbs } from 'src/components/custom-breadcrumbs';
 
-import { DeclarationEditForm } from '../declaration-edit-form';
+import { UserNewEditForm } from '../user-new-edit-form';
 
 // ----------------------------------------------------------------------
 
-export function DeclarationEditView({ invoice }) {
+export function UserCreateView() {
   return (
     <DashboardContent>
       <CustomBreadcrumbs
-        heading="Modifier"
+        heading="Creer un nouvel utilisateur"
         links={[
           { name: 'Dashboard', href: paths.dashboard.root },
-          { name: 'Déclarations', href: paths.dashboard.declaration.root },
-          { name: invoice?.invoiceNumber },
+          { name: 'Utilisateur', href: paths.dashboard.user.root },
+          { name: 'Nouvel utilisateur' },
         ]}
         sx={{ mb: { xs: 3, md: 5 } }}
       />
 
-      <DeclarationEditForm currentInvoice={invoice} />
+      <UserNewEditForm />
     </DashboardContent>
   );
 }
