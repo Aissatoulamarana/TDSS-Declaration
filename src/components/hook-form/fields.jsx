@@ -3,7 +3,8 @@ import { RHFTextField } from './rhf-text-field';
 import { RHFCountrySelect } from './rhf-country-select';
 import { RHFUpload, RHFUploadBox, RHFUploadAvatar } from './rhf-upload';
 import { RHFDatePicker, RHFMobileDateTimePicker } from './rhf-date-picker';
-
+import { RHFSwitch, RHFMultiSwitch } from './rhf-switch';
+import { RHFPhoneInput } from './rhf-phone-input';
 // ----------------------------------------------------------------------
 
 export const Field = {
@@ -15,4 +16,6 @@ export const Field = {
   UploadAvatar: RHFUploadAvatar,
   Upload: RHFUpload,
   CountrySelect: RHFCountrySelect,
+  Switch: RHFSwitch,
+  Phone: RHFPhoneInput,
 };

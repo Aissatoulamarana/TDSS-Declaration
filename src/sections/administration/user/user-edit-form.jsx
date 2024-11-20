@@ -42,7 +42,7 @@ export const NewUserSchema = zod.object({
   company: zod.string().min(1, { message: 'Company is required!' }),
   city: zod.string().min(1, { message: 'City is required!' }),
   role: zod.string().min(1, { message: 'Role is required!' }),
-  zipCode: zod.string().min(1, { message: 'Zip code is required!' }),
+
   // Not required
   status: zod.string(),
   isVerified: zod.boolean(),
@@ -102,7 +102,7 @@ export function UserNewEditForm({ currentUser }) {
   return (
     <Form methods={methods} onSubmit={onSubmit}>
       <Grid2 container spacing={3}>
-        <Grid2 xs={12} md={4}>
+        <Grid2 size={{ xs: 6, md: 4 }}>
           <Card sx={{ pt: 10, pb: 5, px: 3 }}>
             {currentUser && (
               <Label
@@ -184,9 +184,6 @@ export function UserNewEditForm({ currentUser }) {
                   <Typography variant="subtitle2" sx={{ mb: 0.5 }}>
                     Verification du mail
                   </Typography>
-                  <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                    La desactivation de cette option enverra automatiquement à lutilisateur un mail
-                  </Typography>
                 </>
               }
               sx={{ mx: 0, width: 1, justifyContent: 'space-between' }}
@@ -202,7 +199,7 @@ export function UserNewEditForm({ currentUser }) {
           </Card>
         </Grid2>
 
-        <Grid2 xs={12} md={8}>
+        <Grid2 size={{ xs: 6, md: 6 }}>
           <Card sx={{ p: 3 }}>
             <Box
               rowGap={3}

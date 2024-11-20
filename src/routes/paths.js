@@ -72,6 +72,18 @@ export const paths = {
       list: `${ROOTS.DASHBOARD}/penalite/list`,
     },
 
+    user: {
+      root: `${ROOTS.DASHBOARD}/user`,
+      new: `${ROOTS.DASHBOARD}/user/new`,
+      list: `${ROOTS.DASHBOARD}/user/list`,
+    },
+
+    fonction: {
+      root: `${ROOTS.DASHBOARD}/fonction`,
+      new: `${ROOTS.DASHBOARD}/fonction/new`,
+      list: `${ROOTS.DASHBOARD}/fonction/list`,
+    },
+
     group: {
       root: `${ROOTS.DASHBOARD}/group`,
       five: `${ROOTS.DASHBOARD}/group/five`,

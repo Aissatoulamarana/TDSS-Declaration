@@ -16,7 +16,7 @@ import { today, fIsAfter } from 'src/utils/format-time';
 
 import { Form } from 'src/components/hook-form';
 
-import { InvoiceNewEditStatusDate } from './declaration-status';
+import { DeclarationNewEditStatusDate } from './declaration-status';
 import { DeclarationEdit } from './declaration-edit';
 
 // ----------------------------------------------------------------------
@@ -110,7 +110,7 @@ export function DeclarationEditForm({ currentInvoice }) {
   return (
     <Form methods={methods}>
       <Card>
-        <InvoiceNewEditStatusDate />
+        <DeclarationNewEditStatusDate />
 
         <DeclarationEdit />
       </Card>
